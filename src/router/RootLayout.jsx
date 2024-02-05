@@ -1,11 +1,12 @@
 import React from "react";
+import Navbar from "../components/Navbar";
 import { Outlet } from "react-router-dom";
 
 function RootLayout() {
 	return (
 		<div>
-			<h1 className="bg-black text-white">Navbar</h1>
-			<main className="p-5 min-h-[90vh]">
+			<Navbar />
+			<main className="px-5 lg:px-16 py-5 min-h-[85vh] bg-[#121723] text-white grid place-items-center">
 				<Outlet />
 			</main>
 			<h1>Footer</h1>

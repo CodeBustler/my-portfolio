@@ -1,9 +1,10 @@
 import { useState } from "react";
+import HeroSection from "./components/HeroSection";
 
 function App() {
   return (
     <>
-      <div>Hello</div>
+      <HeroSection />
     </>
   );
 }
