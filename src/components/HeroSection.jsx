@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import profile from "../assets/profile.png";
 import { SiHtml5 } from "react-icons/si";
 import { TfiCss3 } from "react-icons/tfi";
@@ -8,9 +8,12 @@ import { FaReact } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
 import { SiRedux } from "react-icons/si";
 import { SiReactrouter } from "react-icons/si";
+import { MdDownload } from "react-icons/md";
+import Resume from "../assets/MallikarjunResume.pdf";
 
 function HeroSection() {
 	const [currentPara, setCurrentPara] = useState(1);
+	const navigateTo = useNavigate();
 
 	useEffect(() => {
 		const interval = setInterval(() => {
@@ -22,14 +25,13 @@ function HeroSection() {
 	}, []);
 
 	return (
-		<div className="container mx-auto h-full grid place-items-center ">
+		<div className="container mx-auto md:mt-24  ">
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-12  md:mt-0">
 				{/*LEFT CONTAINER*/}
 				<div className="order-2 md:order-1 flex flex-col gap-7 text-center md:text-left md:mb-20 ">
 					<div>
 						<h1 className="text-3xl md:text-4xl font-semibold ">
-							Hi, I'm Mallikarjun{" "}
-							<span className="hidden md:inline">Mavnoor</span>
+							Hi, I'm Mallikarjun
 						</h1>
 						<div className="text-2xl md:text-3xl text-gray-400 mt-2">
 							{currentPara === 1 && (
@@ -60,36 +62,41 @@ function HeroSection() {
 						together."
 					</p>
 
-					<div className="flex items-center justify-center md:justify-start gap-5">
+					<div className="flex items-center flex-wrap justify-center md:justify-start gap-5">
 						<Link
 							to="/about_me"
-							className="border px-5 py-2 rounded hover:border-[#F6CD0A]"
+							className="border px-5 py-2 rounded hover:border-[#F6CD0A] uppercase whitespace-nowrap"
 						>
 							About Me
 						</Link>
-						<Link
-							to="/about_me"
-							className="border px-5 py-2 rounded  hover:border-[#F6CD0A]"
+
+						<a
+							href={Resume}
+							download="Mallikarjun Resume.pdf" // Specify the desired filename
+							className="group border px-5 py-2 rounded hover:border-[#F6CD0A] uppercase flex items-center gap-3 whitespace-nowrap"
 						>
-							Resume
-						</Link>
+							Resume{" "}
+							<MdDownload className="text-xl text-gray-500 group-hover:text-[#F6CD0A]" />
+						</a>
 					</div>
 				</div>
 				{/*RIGHT CONTAINER*/}
-				<div className="order-1 md:order-2 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-end lg:mr-20 gap-8">
+				<div className="order-1 md:order-2 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-end  gap-8">
 					<img
 						src={profile}
 						alt="mallikarjun_mavnoor"
 						className="w-40 md:w-72"
+						onClick={() => navigateTo("/about_me")}
+						title="Tap to know about me!"
 					/>
-					<div className="flex md:flex-col gap-3 opacity-30 text-3xl  md:flex">
-						<SiHtml5 className="text-orange-400" />
-						<TfiCss3 className="text-blue-400 " />
-						<IoLogoJavascript className="text-yellow-400 " />
-						<FaReact className="text-blue-500 animate-spin  " />
-						<SiTailwindcss className="text-green-300 " />
-						<SiReactrouter className="text-red-400" />
-						<SiRedux className="text-purple-400" />
+					<div className="flex md:flex-col gap-3  text-3xl  md:flex">
+						<SiHtml5 className="text-orange-400 opacity-30 hover:animate-bounce cursor-pointer" />
+						<TfiCss3 className="text-blue-400 opacity-30 hover:animate-bounce cursor-pointer " />
+						<IoLogoJavascript className="text-yellow-400 opacity-30 hover:animate-bounce cursor-pointer" />
+						<FaReact className="text-blue-500 animate-spin opacity-40 hover:animate-bounce cursor-pointer  " />
+						<SiTailwindcss className="text-green-300 opacity-30 hover:animate-bounce cursor-pointer " />
+						<SiReactrouter className="text-red-400 opacity-30 hover:animate-bounce cursor-pointer" />
+						<SiRedux className="text-purple-400 opacity-30 hover:animate-bounce cursor-pointer" />
 					</div>
 				</div>
 			</div>

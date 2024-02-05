@@ -6,10 +6,9 @@ function RootLayout() {
 	return (
 		<div>
 			<Navbar />
-			<main className="px-5 lg:px-16 py-5 min-h-[85vh] bg-[#121723] text-white grid place-items-center">
+			<main className="px-5 lg:px-24 py-5 min-h-[100vh] bg-[#121723] text-white ">
 				<Outlet />
 			</main>
-			<h1>Footer</h1>
 		</div>
 	);
 }

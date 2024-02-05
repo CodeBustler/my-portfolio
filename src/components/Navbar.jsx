@@ -4,7 +4,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 function Navbar() {
 	return (
-		<nav className="bg-[#1D2430] text-gray-400 font-semibold flex items-center justify-between px-8">
+		<nav className="bg-[#1D2430] text-gray-400 font-semibold flex items-center justify-between px-8 sticky top-0 z-50">
 			<div className="flex gap-5">
 				<Link
 					to="/"
@@ -13,13 +13,11 @@ function Navbar() {
 					Home
 				</Link>
 				<NavLink to="/projects" className="cursor-pointer py-5">
-					Past Work
+					Projects
 				</NavLink>
-				<NavLink to="/skills" className="cursor-pointer py-5">
-					Skills
-				</NavLink>
-				<NavLink to="/testimonials" className="cursor-pointer py-5">
-					Testimonials
+
+				<NavLink to="/about_me" className="cursor-pointer py-5">
+					About Me
 				</NavLink>
 			</div>
 			<NavLink
