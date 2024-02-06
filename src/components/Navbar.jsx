@@ -39,7 +39,7 @@ function Navbar({ toggleSideBar, setToggleSideBar }) {
 				)}
 			</div>
 			{toggleSideBar ? (
-				<div className=" md:hidden absolute top-16 left-0 p-5 pt-1 pr-8 bg-[#1D2430] rounded-br-md shadow-2xl border border-l-0 border-t-0 border-2 border-gray-500">
+				<div className=" md:hidden absolute top-16 left-0 p-5 pt-1 pr-8 bg-[#1D2430] rounded-br-2xl shadow-2xl border border-l-0 border-t-0 border-2 border-gray-500">
 					<div className=" md:hidden flex flex-col items-start  ">
 						<Link
 							to="/"
