@@ -25,7 +25,7 @@ function Skills() {
 		"Firebase Cloud Firestore",
 	];
 
-	const tools = ["Visual Studio Code", "Sublime"];
+	const tools = ["Visual Studio Code", "Sublime Text"];
 	return (
 		<div className="container mx-auto pt-28 min-h-[100vh]" id="skills">
 			<h1 className="text-2xl md:text-3xl lg:text-4xl md:text-4xl font-semibold flex items-end gap-3">
@@ -53,8 +53,11 @@ function Skills() {
 					Front-End
 				</h2>
 				<div className="grid grid-cols-1 md:grid-cols-3  gap-6">
-					{frontEndSkills.map((skill) => (
-						<div className="bg-[#1D2430] py-4 px-6 rounded-lg flex items-center gap-2 hover:outline outline-1 outline-gray-600">
+					{frontEndSkills.map((skill, index) => (
+						<div
+							key={index}
+							className="bg-[#1D2430] py-4 px-6 rounded-lg flex items-center gap-2 hover:outline outline-1 outline-gray-600"
+						>
 							<HiCheckCircle className="text-2xl text-green-500" />
 							{skill}
 						</div>
@@ -69,8 +72,11 @@ function Skills() {
 						Backend & Cloud Services
 					</h2>
 					<div className="flex flex-col  gap-6">
-						{backendAndCloud.map((skill) => (
-							<div className="bg-[#1D2430] py-4 px-6 rounded-lg flex items-center gap-2 hover:outline outline-1 outline-gray-600">
+						{backendAndCloud.map((skill, index) => (
+							<div
+								key={index}
+								className="bg-[#1D2430] py-4 px-6 rounded-lg flex items-center gap-2 hover:outline outline-1 outline-gray-600"
+							>
 								<HiCheckCircle className="text-2xl text-green-500" />
 								{skill}
 							</div>
@@ -83,8 +89,11 @@ function Skills() {
 						Version Control
 					</h2>
 					<div className="flex flex-col gap-4 md:gap-6">
-						{versionControl.map((skill) => (
-							<div className="bg-[#1D2430] py-4 px-6 rounded-lg flex items-center gap-2 hover:outline outline-1 outline-gray-600">
+						{versionControl.map((skill, index) => (
+							<div
+								key={index}
+								className="bg-[#1D2430] py-4 px-6 rounded-lg flex items-center gap-2 hover:outline outline-1 outline-gray-600"
+							>
 								<HiCheckCircle className="text-2xl text-green-500" />
 								{skill}
 							</div>
@@ -97,8 +106,11 @@ function Skills() {
 						IDE Code Editor
 					</h2>
 					<div className="flex flex-col gap-6">
-						{tools.map((skill) => (
-							<div className="bg-[#1D2430] py-4 px-6 rounded-lg flex items-center gap-2 hover:outline outline-1 outline-gray-600">
+						{tools.map((skill, index) => (
+							<div
+								key={index}
+								className="bg-[#1D2430] py-4 px-6 rounded-lg flex items-center gap-2 hover:outline outline-1 outline-gray-600"
+							>
 								<HiCheckCircle className="text-2xl text-green-500" />
 								{skill}
 							</div>

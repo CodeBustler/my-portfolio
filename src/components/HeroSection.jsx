@@ -16,7 +16,9 @@ import { RiTwitterXFill } from "react-icons/ri";
 
 function HeroSection() {
 	const [currentPara, setCurrentPara] = useState(1);
+	const [isDownloading, setIsDownloading] = useState(false);
 	const navigateTo = useNavigate();
+	// ------------------------------------------------------------------
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -28,8 +30,14 @@ function HeroSection() {
 		return () => clearInterval(interval);
 	}, []);
 
-	const socialIconStyle = "  transition ";
+	const handleDownloadAnimation = (e) => {
+		if (e.target.tagName === "A") {
+			setIsDownloading(true);
+			const timeoutId = setTimeout(() => setIsDownloading(false), 2500);
+		}
+	};
 
+	// ------------------------------------------------------------------
 	return (
 		<div className="container mx-auto md:mt-24  ">
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-12  md:mt-0">
@@ -72,7 +80,7 @@ function HeroSection() {
 						<a
 							href="https://github.com/codebustler"
 							target="blank"
-							className="group p-0 py-4 pr-4  cursor-pointeon"
+							className="group p-4 md:p-0 md:py-4 md:pr-4  cursor-pointeon"
 						>
 							<ImGithub
 								className={` group-hover:text-white group-hover:scale-125 r transiti`}
@@ -125,23 +133,28 @@ function HeroSection() {
 							className="group p-4  cursor-pointer "
 						>
 							<RiTwitterXFill
-								className={`${socialIconStyle} group-hover:text-white group-hover:scale-125 transition`}
+								className={`group-hover:text-white group-hover:scale-125 transition`}
 								title="@CodeBustler"
 							/>
 						</a>
 					</div>
-					<div className="flex items-center flex-wrap justify-center md:justify-start gap-5 mt-6">
+					<div className="flex items-center  justify-between md:justify-start gap-5 mt-6">
 						<a
 							href={Resume}
 							download="Mallikarjun Resume.pdf"
-							className="group bg-[#F6CD0A] px-5 py-2 rounded   flex items-center gap-3 whitespace-nowrap font-semibold text-gray-800"
+							className=" bg-[#F6CD0A] active:bg-yellow-300 px-5 py-2 rounded transition flex items-center justify-center gap-3 whitespace-nowrap font-semibold text-gray-800  w-[50%] md:w-auto"
+							onClick={(e) => handleDownloadAnimation(e)}
 						>
 							Resume{" "}
-							<MdDownload className="text-xl text-gray-800 group-hover:animate-bounce " />
+							<MdDownload
+								className={`text-xl ${
+									isDownloading ? "animate-bounce" : ""
+								} `}
+							/>
 						</a>
 						<Link
 							to="/about_me"
-							className="border border-gray-500 px-5 py-2 rounded hover:border-[#F6CD0A]  whitespace-nowrap "
+							className="border border-gray-500 px-5 py-2 rounded hover:border-[#F6CD0A]  whitespace-nowrap  w-[50%] md:w-auto"
 						>
 							About Me
 						</Link>
@@ -149,15 +162,24 @@ function HeroSection() {
 				</div>
 
 				{/*RIGHT CONTAINER -----------------------------------------------------*/}
-				<div className="order-1 md:order-2 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-end  gap-8">
-					<img
-						src={profile}
-						alt="mallikarjun_mavnoor"
-						className="w-40 md:w-72"
-						onClick={() => navigateTo("/about_me")}
-						title="Tap to know about me!"
-					/>
-					<div className="flex md:flex-col gap-3  text-3xl  md:flex">
+				<div className="order-1 md:order-2 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-end gap-16 md:gap-24">
+					<div className="relative">
+						<img
+							src={profile}
+							alt="mallikarjun_mavnoor"
+							className="w-40 md:w-80 md:blur-3xl opacity-0 md:opacity-20 md:animate-pulse"
+							onClick={() => navigateTo("/about_me")}
+							title="Tap to know about me!"
+						/>
+						<img
+							src={profile}
+							alt="mallikarjun_mavnoor"
+							className="absolute top-5 right-1 w-40 md:w-72"
+							onClick={() => navigateTo("/about_me")}
+							title="Tap to know about me!"
+						/>
+					</div>
+					<div className="flex md:flex-col gap-3  text-3xl  md:flex ">
 						<SiHtml5 className="text-orange-400 opacity-30 hover:animate-bounce cursor-pointer" />
 						<TfiCss3 className="text-blue-400 opacity-30 hover:animate-bounce cursor-pointer " />
 						<IoLogoJavascript className="text-yellow-400 opacity-30 hover:animate-bounce cursor-pointer" />

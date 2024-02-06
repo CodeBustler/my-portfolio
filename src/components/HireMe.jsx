@@ -27,11 +27,11 @@ function HireMe() {
 						rows="7"
 						className="bg-[#1D2430] rounded-md px-5 py-4 "
 					></textarea>
-					<div className="flex items-center gap-5  mt-2">
-						<button className=" px-10 py-2 rounded-lg bg-green-600 active:bg-green-700  whitespace-nowrap transition">
+					<div className="flex items-center  gap-5  mt-2">
+						<button className=" px-10 py-2 rounded-lg bg-green-600 active:bg-green-700  whitespace-nowrap transition w-[50%] md:w-auto">
 							Submit
 						</button>
-						<button className=" px-10 py-2 rounded-lg bg-gray-600 active:bg-gray-700  whitespace-nowrap">
+						<button className=" px-10 py-2 rounded-lg bg-gray-600 active:bg-gray-700  whitespace-nowrap w-[50%] md:w-auto">
 							Reset
 						</button>
 					</div>
@@ -43,10 +43,10 @@ function HireMe() {
 							<iframe
 								width="100%"
 								height="700"
-								frameborder="0"
+								frameBorder="0"
 								scrolling="no"
-								marginheight="0"
-								marginwidth="0"
+								marginHeight="0"
+								marginWidth="0"
 								src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Hyderabad+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
 							></iframe>
 						</div>
