@@ -16,6 +16,7 @@ function HeroSection() {
 	const navigateTo = useNavigate();
 
 	useEffect(() => {
+		window.scrollTo(0, 0);
 		const interval = setInterval(() => {
 			// RANGE FROM 1 to 3
 			setCurrentPara((prev) => (prev % 3) + 1);

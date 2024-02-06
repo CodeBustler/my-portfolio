@@ -2,6 +2,9 @@ import { useState } from "react";
 import HeroSection from "./components/HeroSection";
 import PastWork from "./components/PastWork";
 import Projects from "./components/Projects";
+import Skills from "./components/Skills";
+import Testimonials from "./components/Testimonials";
+import HireMe from "./components/HireMe";
 
 function App() {
   return (
@@ -9,6 +12,9 @@ function App() {
       <HeroSection />
       <Projects />
       <PastWork />
+      <Skills />
+      <Testimonials />
+      <HireMe />
     </>
   );
 }
