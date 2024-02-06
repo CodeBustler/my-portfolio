@@ -10,7 +10,7 @@ import { FaCircleArrowLeft } from "react-icons/fa6";
 
 function Projects() {
 	return (
-		<div className="container mx-auto pt-28" id="projects">
+		<div className="container mx-auto pt-24 md:pt-28" id="projects">
 			<div className="flex items-center justify-between">
 				<h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-center md:text-left flex items-end gap-3">
 					<MdDashboard className="text-gray-500 mb-1" /> Projects

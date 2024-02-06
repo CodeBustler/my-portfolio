@@ -27,7 +27,7 @@ function Skills() {
 
 	const tools = ["Visual Studio Code", "Sublime Text"];
 	return (
-		<div className="container mx-auto pt-28 min-h-[100vh]" id="skills">
+		<div className="container mx-auto pt-24 md:pt-28 " id="skills">
 			<h1 className="text-2xl md:text-3xl lg:text-4xl md:text-4xl font-semibold flex items-end gap-3">
 				<GrTechnology className="text-gray-500 mb-1" />
 				Skills

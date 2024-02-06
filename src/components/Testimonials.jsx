@@ -5,7 +5,7 @@ import avatar from "../assets/avatar.png";
 
 function Testimonials() {
 	return (
-		<div className="container mx-auto pt-28 min-h-[80vh]" id="testimonials">
+		<div className="container mx-auto pt-24 md:pt-28 " id="testimonials">
 			<h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold flex items-end gap-3">
 				<IoMdThumbsUp className="text-gray-500  mb-1" />
 				Client Testimonials

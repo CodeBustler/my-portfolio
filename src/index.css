@@ -8,6 +8,8 @@ html {
 	font-family: "Poppins", sans-serif;
 	box-sizing: border-box;
 	scroll-behavior: smooth;
+	background: #121723;
+	color: white;
 }
 
 .active {

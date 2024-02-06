@@ -5,7 +5,7 @@ import { MdWork } from "react-icons/md";
 
 function PastWork() {
 	return (
-		<div className="container mx-auto pt-28 " id="past_work">
+		<div className="container mx-auto pt-24 md:pt-28 " id="past_work">
 			<h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold  flex items-end gap-3">
 				<MdWork className="text-gray-500 mb-1" />
 				Past Work
