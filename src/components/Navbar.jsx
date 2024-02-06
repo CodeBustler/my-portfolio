@@ -5,6 +5,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { HiMiniHome } from "react-icons/hi2";
 import { HiOutlineXMark } from "react-icons/hi2";
 import { HiBars3CenterLeft } from "react-icons/hi2";
+import { FaUser } from "react-icons/fa";
 
 function Navbar({ toggleSideBar, setToggleSideBar }) {
 	const [activeLink, setActiveLink] = useState("");
@@ -26,7 +27,7 @@ function Navbar({ toggleSideBar, setToggleSideBar }) {
 	};
 
 	return (
-		<nav className="relative bg-[#1D2430] text-gray-400 font-semibold flex items-center justify-between px-8 sticky top-0 z-50">
+		<nav className="relative bg-[#1D2430] text-gray-400 font-semibold flex items-center justify-between px-8 sticky top-0 z-50 ">
 			<div
 				className="flex md:hidden items-center gap-4 cursor-pointer"
 				onClick={tSideBar}
@@ -38,8 +39,19 @@ function Navbar({ toggleSideBar, setToggleSideBar }) {
 				)}
 			</div>
 			{toggleSideBar ? (
-				<div className=" md:hidden absolute top-16 left-0 p-5 bg-[#1D2430] rounded-br-md shadow-2xl border border-l-0 border-t-0 border-2 border-gray-500">
+				<div className=" md:hidden absolute top-16 left-0 p-5 pt-1 pr-8 bg-[#1D2430] rounded-br-md shadow-2xl border border-l-0 border-t-0 border-2 border-gray-500">
 					<div className=" md:hidden flex flex-col items-start  ">
+						<Link
+							to="/"
+							className="capitalize py-3 pl-4 w-[100%] flex items-center gap-3 border border-gray-600 border-l-0 border-t-0 border-r-0 border-l-0 mb-3 "
+							onClick={() => {
+								tSideBar();
+								window.scrollTo(0, 0);
+							}}
+						>
+							<HiMiniHome className="text-xl mb-1" />
+							Home
+						</Link>
 						{navLinks.map((links, index) => (
 							<a
 								key={index}
@@ -52,9 +64,10 @@ function Navbar({ toggleSideBar, setToggleSideBar }) {
 						))}
 						<Link
 							to="/about_me"
-							className="capitalize py-3 pl-4 w-[100%]"
+							className="capitalize py-3 pl-4 w-[100%] border border-gray-600 border-l-0 border-b-0 border-r-0 border-l-0 mt-3 flex items-center gap-3"
 							onClick={tSideBar}
 						>
+							<FaUser className="text-lg mb-1" />
 							About Me
 						</Link>
 					</div>
@@ -63,7 +76,7 @@ function Navbar({ toggleSideBar, setToggleSideBar }) {
 				""
 			)}
 			{/*NAV_LINKS*/}
-			<div className="hidden md:flex items-center gap-5 ">
+			<div className="hidden md:flex items-center gap-5  ">
 				<Link
 					to="/"
 					onClick={home}

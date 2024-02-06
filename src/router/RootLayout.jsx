@@ -16,6 +16,7 @@ function RootLayout() {
 				className={`px-5 lg:px-24 py-5 min-h-[100vh] bg-[#121723] text-white  ${
 					toggleSideBar ? "blur transition " : ""
 				} `}
+				onClick={() => setToggleSideBar(false)}
 			>
 				<Outlet />
 			</main>
