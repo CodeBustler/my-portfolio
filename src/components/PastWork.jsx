@@ -1,8 +1,10 @@
-import React from "react";
+// ASSETS
+import { MdWork } from "react-icons/md";
 import ab from "../assets/ab.mp4";
 import srs from "../assets/srs.mp4";
-import { MdWork } from "react-icons/md";
-
+// COMPONENT
+import ProjectPreview from "./ProjectPreview";
+// -------------------------------------------------------------
 function PastWork() {
 	return (
 		<div className="container mx-auto pt-24 md:pt-28 " id="past_work">
@@ -12,16 +14,25 @@ function PastWork() {
 				<span className="text-gray-500 text-2xl">Freelance</span>
 			</h1>
 			<div className="grid grid-cols-1 md:grid-cols-2  gap-10 mt-12">
-				{/*<div className="rounded-xl grid-rows-2 overflow-hidden">
-					<video src={ab} autoPlay muted loop>
-						BlinkMart E-Commerce| ReactJS web app Demo
-					</video>
-				</div>
-				<div className="rounded-xl  overflow-hidden">
-					<video src={srs} autoPlay muted loop>
-						Epic News | ReactJS web app Demo
-					</video>
-				</div>*/}
+				<ProjectPreview
+					video={ab}
+					projectSummary={"Freelance Project 1 | Preview"}
+					projectTitle={"Freelance Project 1 "}
+					projectType={" HTML5, CSS3 & JavaScript"}
+					technologies={"Online presence & featuring company details"}
+					gitHubUrl={"https://github.com/CodeBustler/ab-website"}
+					projectUrl={"https://codebustler.github.io/ab-website/"}
+				/>
+
+				<ProjectPreview
+					video={srs}
+					projectSummary={"Freelance Project 2 | Preview"}
+					projectTitle={"Freelance Project 2 "}
+					projectType={" HTML5, CSS3 & JavaScript"}
+					technologies={"Online presence & featuring company details"}
+					gitHubUrl={"https://github.com/CodeBustler/srs-website"}
+					projectUrl={"https://codebustler.github.io/srs-website/"}
+				/>
 			</div>
 		</div>
 	);
