@@ -1,7 +1,59 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { IoMdThumbsUp } from "react-icons/io";
 import { AiFillCode } from "react-icons/ai";
-import avatar from "../assets/avatar.png";
+import { BiSolidQuoteLeft } from "react-icons/bi";
+import { MdStar } from "react-icons/md";
+import { MdStarBorder } from "react-icons/md";
+import ab from "../assets/ab.png";
+import shantanu from "../assets/shantanu.png";
+
+function TestimonialCard({ message, avatar, logo, clientName, desig, org }) {
+	const [changeAvatar, setChangeAvatar] = useState(avatar);
+
+	useEffect(() => {
+		let intervalId;
+
+		intervalId = setInterval(() => {
+			setChangeAvatar((prevAvatar) =>
+				prevAvatar === logo ? avatar : logo,
+			);
+		}, 1500);
+
+		return () => clearInterval(intervalId);
+	}, []);
+
+	return (
+		<div className="relative rounded-lg grid-rows-2 overflow-hidden bg-[#1D2430] p-8 md:p-10 hover:outline outline-1 outline-gray-600 ">
+			<div className="flex gap-4 ">
+				<div className="relative">
+					<img
+						src={changeAvatar}
+						alt="avatar"
+						className="rounded-full w-16 h-16 animate-pulse"
+					/>
+				</div>
+				<div className="">
+					<p>{clientName}</p>
+					<p className="text-gray-400 text-sm">{desig}</p>
+					<p className="text-gray-400 text-sm">{org}</p>
+				</div>
+			</div>
+			<p className="leading-7 text-gray-300 z-50  mt-6 ">{message}</p>
+			<div className="mt-6 flex items-center gap-3">
+				<span className="text-gray-400">Rating :</span>
+				<div className="flex items-center gap-1 text-lg text-yellow-500 ">
+					<MdStar />
+					<MdStar />
+					<MdStar />
+					<MdStar />
+					<MdStar />
+				</div>
+				<span className="text-gray-400">5/5</span>
+			</div>
+			<BiSolidQuoteLeft className="absolute right-6 top-6 rotate-180 text-7xl text-gray-700 opacity-50 -mt-2 hidden lg:block" />
+		</div>
+	);
+}
 
 function Testimonials() {
 	return (
@@ -11,46 +63,26 @@ function Testimonials() {
 				Client Testimonials
 			</h1>
 			<div className="grid grid-cols-1 md:grid-cols-2  gap-10 mt-12">
-				<div className="rounded-lg grid-rows-2 overflow-hidden bg-[#1D2430] p-10">
-					<AiFillCode className="text-4xl text-gray-500" />
-					<p className="leading-7 text-gray-300 mt-5 px-5">
-						Lorem, ipsum dolor, sit amet consectetur adipisicing
-						elit. Quasi error neque rem, optio vitae iste molestiae
-						voluptatum harum itaque, inventore sint nam cupiditate,
-						alias, explicabo! Beatae, eligendi dicta alias delectus!
-					</p>
-					<div className="flex items-center justify-center gap-5 mt-7">
-						<img
-							src={avatar}
-							alt="avatar"
-							className="rounded-full w-14"
-						/>
-						<div className="text-center">
-							<p>Client Name</p>
-							<p className="text-gray-300 text-sm">Designation</p>
-						</div>
-					</div>
-				</div>
-				<div className="rounded-lg grid-rows-2 overflow-hidden bg-[#1D2430] p-10">
-					<AiFillCode className="text-4xl text-gray-500" />
-					<p className="leading-7 text-gray-300 mt-5 px-5">
-						Lorem, ipsum dolor, sit amet consectetur adipisicing
-						elit. Quasi error neque rem, optio vitae iste molestiae
-						voluptatum harum itaque, inventore sint nam cupiditate,
-						alias, explicabo! Beatae, eligendi dicta alias delectus!
-					</p>
-					<div className="flex items-center justify-center gap-5 mt-7">
-						<img
-							src={avatar}
-							alt="avatar"
-							className="rounded-full w-14"
-						/>
-						<div className="text-center">
-							<p>Client Name</p>
-							<p className="text-gray-300 text-sm">Designation</p>
-						</div>
-					</div>
-				</div>
+				<TestimonialCard
+					message={
+						"Exceptional website development services! Mallikarjun exceeded my expectations with their professionalism, attention to detail, and timely delivery. Highly recommended for anyone seeking top-notch web solutions."
+					}
+					clientName={"Shantanu Brahma"}
+					desig={"Founder & CEO"}
+					org={" Aham Bhramhasmi Sevice Private Limited"}
+					avatar={shantanu}
+					logo={ab}
+				/>
+				<TestimonialCard
+					message={
+						"Exceptional website development services! Mallikarjun exceeded my expectations with their professionalism, attention to detail, and timely delivery. Highly recommended for anyone seeking top-notch web solutions."
+					}
+					clientName={"Shantanu Brahma"}
+					desig={"Founder & CEO"}
+					org={" Aham Bhramhasmi Sevice Private Limited"}
+					avatar={shantanu}
+					logo={ab}
+				/>
 			</div>
 		</div>
 	);
