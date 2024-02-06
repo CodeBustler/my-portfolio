@@ -37,3 +37,16 @@ html {
 		opacity: 0;
 	}
 }
+
+.mapouter {
+	position: relative;
+	text-align: right;
+	height: 60%;
+	width: 100%;
+}
+.gmap_canvas {
+	overflow: hidden;
+	background: none !important;
+	height: 100%;
+	width: 100%;
+}

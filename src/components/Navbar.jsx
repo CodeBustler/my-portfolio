@@ -27,12 +27,15 @@ function Navbar() {
 					Home
 				</Link>
 				{navLinks.map((links) => (
-					<a href={links.link} className="capitalize">
+					<a href={links.link} className="capitalize py-5">
 						{links.linkTitle}
 					</a>
 				))}
 			</div>
-			<a href="#hire_me" className="capitalize flex items-center gap-3 ">
+			<a
+				href="#hire_me"
+				className="capitalize flex items-center gap-3 py-5"
+			>
 				hire me <FaArrowRightLong className="rotate-180 text-2xl" />
 			</a>
 		</nav>
