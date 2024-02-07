@@ -7,7 +7,15 @@ import { MdStarBorder } from "react-icons/md";
 import ab from "../assets/ab.png";
 import shantanu from "../assets/shantanu.png";
 
-function TestimonialCard({ message, avatar, logo, clientName, desig, org }) {
+function TestimonialCard({
+	message,
+	avatar,
+	logo,
+	clientName,
+	desig,
+	org,
+	officialUrl,
+}) {
 	const [changeAvatar, setChangeAvatar] = useState(avatar);
 
 	useEffect(() => {
@@ -29,13 +37,19 @@ function TestimonialCard({ message, avatar, logo, clientName, desig, org }) {
 					<img
 						src={changeAvatar}
 						alt="avatar"
-						className="rounded-full w-16 h-16 animate-pulse"
+						className="rounded-full w-[70px] h-[70px] "
 					/>
 				</div>
-				<div className="">
+				<div className="flex flex-col justify-center">
 					<p>{clientName}</p>
 					<p className="text-gray-400 text-sm">{desig}</p>
-					<p className="text-gray-400 text-sm">{org}</p>
+					<a
+						href={officialUrl}
+						className="text-gray-400 text-sm"
+						target="blank"
+					>
+						{org}
+					</a>
 				</div>
 			</div>
 			<p className="leading-7 text-gray-300 z-50  mt-6 ">{message}</p>
@@ -50,7 +64,7 @@ function TestimonialCard({ message, avatar, logo, clientName, desig, org }) {
 				</div>
 				<span className="text-gray-400">5/5</span>
 			</div>
-			<BiSolidQuoteLeft className="absolute right-6 top-6 rotate-180 text-7xl text-gray-700 opacity-50 -mt-2 hidden lg:block" />
+			<BiSolidQuoteLeft className="absolute right-4 md:right-6 top-6 rotate-180 text-7xl text-gray-700 opacity-50 -mt-2 " />
 		</div>
 	);
 }
@@ -69,19 +83,10 @@ function Testimonials() {
 					}
 					clientName={"Shantanu Brahma"}
 					desig={"Founder & CEO"}
-					org={" Aham Bhramhasmi Sevice Private Limited"}
+					org={" AB Sevice Private Limited"}
 					avatar={shantanu}
 					logo={ab}
-				/>
-				<TestimonialCard
-					message={
-						"Exceptional website development services! Mallikarjun exceeded my expectations with their professionalism, attention to detail, and timely delivery. Highly recommended for anyone seeking top-notch web solutions."
-					}
-					clientName={"Shantanu Brahma"}
-					desig={"Founder & CEO"}
-					org={" Aham Bhramhasmi Sevice Private Limited"}
-					avatar={shantanu}
-					logo={ab}
+					officialUrl={"https://www.ahambhramhasmi.com/"}
 				/>
 			</div>
 		</div>

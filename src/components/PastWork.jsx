@@ -21,7 +21,7 @@ function PastWork() {
 					projectType={" HTML5, CSS3 & JavaScript"}
 					technologies={"Online presence & featuring company details"}
 					gitHubUrl={"https://github.com/CodeBustler/ab-website"}
-					projectUrl={"https://codebustler.github.io/ab-website/"}
+					projectUrl={"https://aham-brahma-demo.netlify.app/"}
 				/>
 
 				<ProjectPreview
@@ -31,7 +31,7 @@ function PastWork() {
 					projectType={" HTML5, CSS3 & JavaScript"}
 					technologies={"Online presence & featuring company details"}
 					gitHubUrl={"https://github.com/CodeBustler/srs-website"}
-					projectUrl={"https://codebustler.github.io/srs-website/"}
+					projectUrl={"https://srs-satellite-demo.netlify.app/"}
 				/>
 			</div>
 		</div>

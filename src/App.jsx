@@ -10,8 +10,8 @@ function App() {
   return (
     <>
       <HeroSection />
-      <Projects />
-      <PastWork />
+      {/*<Projects />*/}
+      {/*<PastWork />*/}
       <Skills />
       <Testimonials />
       <HireMe />

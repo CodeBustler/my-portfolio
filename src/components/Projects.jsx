@@ -57,14 +57,12 @@ function Projects() {
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
 				<ProjectPreview
 					video={imageSearchEngine}
-					projectSummary={"Epic News | ReactJS web app Demo"}
+					projectSummary={"Image Search Engine | Demo"}
 					projectTitle={"Image Search Engine"}
 					gitHubUrl={
 						"https://github.com/CodeBustler/image-search-engine"
 					}
-					projectUrl={
-						"https://codebustler.github.io/image-search-engine/"
-					}
+					projectUrl={"https://image-search-engine-cb.netlify.app/"}
 				/>
 				<ProjectPreview
 					video={tribute}
@@ -73,9 +71,7 @@ function Projects() {
 					gitHubUrl={
 						"https://github.com/CodeBustler/tribute-page-ironman"
 					}
-					projectUrl={
-						"https://codebustler.github.io/tribute-page-ironman/"
-					}
+					projectUrl={"https://tribute-ironman.netlify.app/"}
 				/>
 
 				<ProjectPreview
@@ -87,9 +83,7 @@ function Projects() {
 					gitHubUrl={
 						"https://github.com/CodeBustler/infinity-image-slider"
 					}
-					projectUrl={
-						"https://codebustler.github.io/infinity-image-slider/"
-					}
+					projectUrl={"https://infinity-images-slider.netlify.app/"}
 				/>
 			</div>
 		</div>

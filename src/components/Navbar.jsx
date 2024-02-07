@@ -8,7 +8,7 @@ import { HiBars3CenterLeft } from "react-icons/hi2";
 import { FaUser } from "react-icons/fa";
 
 function Navbar({ toggleSideBar, setToggleSideBar }) {
-	const [activeLink, setActiveLink] = useState("");
+	const [activeLink, setActiveLink] = useState("home");
 
 	const navLinks = [
 		{ linkTitle: "projects", link: "#projects" },
@@ -88,15 +88,28 @@ function Navbar({ toggleSideBar, setToggleSideBar }) {
 					<a
 						key={index}
 						href={links.link}
-						className="capitalize py-5"
+						onClick={() => setActiveLink(links.link)}
+						className={`${
+							activeLink == links.link
+								? "underline underline-offset-8 decoration-yellow-400"
+								: ""
+						} capitalize py-5 transition`}
 					>
 						{links.linkTitle}
 					</a>
 				))}
+				<Link to="/all_projects" className=" cursor-pointer  py-5">
+					All Projects
+				</Link>
 			</div>
 			<a
 				href="#hire_me"
-				className="capitalize flex items-center gap-3 py-5"
+				className={`capitalize flex items-center gap-3 py-5 ${
+					activeLink == "#hire_me"
+						? "underline underline-offset-8 decoration-yellow-400"
+						: ""
+				} `}
+				onClick={() => setActiveLink("#hire_me")}
 			>
 				hire me <FaArrowRightLong className="rotate-180 text-2xl" />
 			</a>
