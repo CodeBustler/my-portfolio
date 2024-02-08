@@ -1,11 +1,13 @@
 // ASSETS
 import { MdWork } from "react-icons/md";
-import ab from "../assets/ab.mp4";
-import srs from "../assets/srs.mp4";
 // COMPONENT
 import ProjectPreview from "./ProjectPreview";
+import { useContext } from "react";
+import { MyContext } from "../main";
+
 // -------------------------------------------------------------
 function PastWork() {
+	const { abPreview, srsPreview } = useContext(MyContext);
 	return (
 		<div className="container mx-auto pt-24 md:pt-28 " id="past_work">
 			<h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold  flex items-end gap-3">
@@ -15,7 +17,7 @@ function PastWork() {
 			</h1>
 			<div className="grid grid-cols-1 md:grid-cols-2  gap-10 mt-12">
 				<ProjectPreview
-					video={ab}
+					video={abPreview}
 					projectSummary={"Freelance Project 1 | Preview"}
 					projectTitle={"Freelance Project 1 "}
 					projectType={" HTML5, CSS3 & JavaScript"}
@@ -25,7 +27,7 @@ function PastWork() {
 				/>
 
 				<ProjectPreview
-					video={srs}
+					video={srsPreview}
 					projectSummary={"Freelance Project 2 | Preview"}
 					projectTitle={"Freelance Project 2 "}
 					projectType={" HTML5, CSS3 & JavaScript"}

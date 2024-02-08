@@ -1,9 +1,4 @@
 // ASSETS
-import bm from "../assets/bm.mp4";
-import epic from "../assets/epic.mp4";
-import imageSearchEngine from "../assets/imageSearchEngine.mp4";
-import infinityImageSlider from "../assets/infinityImageSlider.mp4";
-import tribute from "../assets/tribute.mp4";
 import { MdDashboard } from "react-icons/md";
 import { FaCircleArrowLeft } from "react-icons/fa6";
 import { FaCode } from "react-icons/fa6";
@@ -12,8 +7,20 @@ import { AiOutlineBars } from "react-icons/ai";
 // ROUTER & DOM
 import ProjectPreview from "./ProjectPreview";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { MyContext } from "../main";
 
 function Projects() {
+	const {
+		bmPreview,
+		epicPreview,
+		imageSearchEnginePreview,
+		infinityImageSliderPreview,
+		tributePreview,
+		abPreview,
+		srsPreview,
+	} = useContext(MyContext);
+
 	return (
 		<div className="container mx-auto pt-24 md:pt-28" id="projects">
 			<div className="flex items-center justify-between">
@@ -32,7 +39,7 @@ function Projects() {
 			<div className="grid grid-cols-1 md:grid-cols-2  gap-10 mt-12">
 				{/*PREVIEW */}
 				<ProjectPreview
-					video={bm}
+					video={bmPreview}
 					projectSummary={
 						"BlinkMart E-Commerce| ReactJS web app Demo"
 					}
@@ -45,7 +52,7 @@ function Projects() {
 					projectUrl={"https://blinkmart.netlify.app/"}
 				/>
 				<ProjectPreview
-					video={epic}
+					video={epicPreview}
 					projectSummary={"Epic News | ReactJS web app Demo"}
 					projectTitle={"Epic News | Realtime"}
 					projectType={"News Web App"}
@@ -56,7 +63,7 @@ function Projects() {
 			</div>
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
 				<ProjectPreview
-					video={imageSearchEngine}
+					video={imageSearchEnginePreview}
 					projectSummary={"Image Search Engine | Demo"}
 					projectTitle={"Image Search Engine"}
 					gitHubUrl={
@@ -65,7 +72,7 @@ function Projects() {
 					projectUrl={"https://image-search-engine-cb.netlify.app/"}
 				/>
 				<ProjectPreview
-					video={tribute}
+					video={tributePreview}
 					projectSummary={"Iron Man Tribute Demo | HTML & CSS"}
 					projectTitle={"Iron Man | Tribute Page"}
 					gitHubUrl={
@@ -75,7 +82,7 @@ function Projects() {
 				/>
 
 				<ProjectPreview
-					video={infinityImageSlider}
+					video={infinityImageSliderPreview}
 					projectSummary={
 						"Infinity Images Slider Demo | HTML, CSS & JavaScript"
 					}

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import { Outlet } from "react-router-dom";
 import TapToTop from "../components/TapToTop";
+import Footer from "../components/Footer";
 
 function RootLayout() {
 	const [toggleSideBar, setToggleSideBar] = useState(false);
@@ -21,6 +22,7 @@ function RootLayout() {
 				<Outlet />
 			</main>
 			<TapToTop />
+			<Footer />
 		</div>
 	);
 }

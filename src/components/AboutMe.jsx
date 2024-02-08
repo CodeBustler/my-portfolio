@@ -1,6 +1,15 @@
 import React from "react";
 import { FaUser } from "react-icons/fa";
 import SeconNavbar from "./SeconNavbar";
+import profile2 from "../assets/profile2.png";
+import { HiComputerDesktop } from "react-icons/hi2";
+import { PiHandWavingFill } from "react-icons/pi";
+import { Link } from "react-router-dom";
+import { FaExternalLinkAlt } from "react-icons/fa";
+import { BsYoutube } from "react-icons/bs";
+import { SiInstagram } from "react-icons/si";
+import { FaLink } from "react-icons/fa6";
+import Footer from "./Footer";
 
 function AboutMe() {
 	return (
@@ -14,7 +23,143 @@ function AboutMe() {
 					<FaUser className="text-gray-500 mb-1" />
 					About Me
 				</div>
+				{/*CONTAINER*/}
+				<div className="mt-14 flex flex-col items-center lg:items-start lg:flex-row gap-16">
+					<img
+						src={profile2}
+						alt=""
+						className="w-[250px] h-[250px] saturate-[1.1] filter contrast-[1.1] sticky lg:top-24"
+					/>
+					<div>
+						{/*INTRO */}
+						<p className="text-gray-400 leading-7">
+							<span className="text-2xl text-gray-300 ">
+								<PiHandWavingFill className="inline mb-1 rotate-12 " />{" "}
+								Hey there,
+							</span>{" "}
+							I'm Mallikarjun Mavnoor, a frontend developer from
+							Karnataka, currently based in Hyderabad, India. I
+							hold a{" "}
+							<span className=" underline underline-offset-4 font-semibold">
+								B.Tech in Computer Science
+							</span>{" "}
+							from JNTU (Jawaharlal Nehru Technological
+							University) Hyderabad & thrive on frontend
+							technologies, particularly{" "}
+							<span className=" underline underline-offset-4 font-semibold">
+								JavaScript & React.js.
+							</span>
+							&nbsp;I've built web applications & collaborated on
+							freelance projects, including launching two call
+							center websites with BigRock. Let's collaborate and
+							bring your digital projects to life.
+						</p>
+						{/*What i Do ? */}
+						<div className="container mt-16">
+							<h1 className="text-2xl md:text-3xl  font-semibold  flex items-end gap-3">
+								<HiComputerDesktop className="text-gray-500 mb-1" />
+								What I do ?
+							</h1>
+							<div className="grid grid-cols-1 md:grid-cols-2 gap-6 leading-7 mt-7">
+								<div className="border border-gray-700 md:border-gray-800 hover:border-gray-600 transition p-10 rounded-lg ">
+									<div className="text-lg font-semibold">
+										Freelance Work:{" "}
+									</div>
+									<div className="text-gray-400 mt-2">
+										Engaging in freelance projects offers
+										real-world experience, enabling me to
+										create solutions for live users. It's a
+										chance to enhance my full-stack
+										development understanding & expand my
+										skill set.
+									</div>
+									<div className="  flex items-center  text-gray-300 text-xl mt-4 transition">
+										<Link
+											to="/all_projects"
+											className="text-gray-300 text-xl flex items-center "
+										>
+											<FaExternalLinkAlt className="animate-pulse ml-2 m-3" />
+											<small>Freelance Projects</small>
+										</Link>
+									</div>
+								</div>
+
+								<div className="border border-gray-700 md:border-gray-800 hover:border-gray-600 transition p-10 rounded-lg ">
+									<div className="text-lg font-semibold">
+										Social Media Content Creation{" "}
+									</div>
+									<div className="text-gray-400 mt-2">
+										I actively create & share content on
+										platforms like Instagram, YouTube &
+										more, focusing on frontend web
+										development. This helps me enhance my
+										knowledge and skills in frontend
+										development.
+									</div>
+									<div className="  flex items-center  text-gray-300 text-xl mt-4 transition">
+										<a
+											href="https://www.instagram.com/codebustler/"
+											target="blank"
+											className="hover:text-pink-400 hover:scale-125 transition pl-1 p-3 cursor-pointer"
+											title="Instagram/CodeBustler"
+										>
+											<SiInstagram />
+										</a>
+										<a
+											href="https://www.youtube.com/@codebustler/"
+											target="blank"
+											className="hover:text-red-500 hover:scale-125 transition p-3 cursor-pointer mr-3 group-hover:animate-bounce"
+											title="Youtube/CodeBustler"
+										>
+											<BsYoutube className="scale-125 " />
+										</a>
+										<small title="Click on icons to open!">
+											@CodeBustler
+										</small>
+									</div>
+								</div>
+								<div className="border border-gray-700 md:border-gray-800 hover:border-gray-600 transition p-10 rounded-lg ">
+									<div className="text-lg font-semibold">
+										Side Projects:{" "}
+									</div>
+									<div className="text-gray-400 mt-2">
+										I regularly undertake side projects to
+										maintain coding consistency & explore
+										new concepts. You can explore my
+										portfolio of all projects in the
+										dedicated section/click Link
+									</div>
+
+									<div className="  flex items-center  text-gray-300 text-xl mt-4 transition">
+										<Link
+											to="/all_projects"
+											className="text-gray-300 text-xl flex items-center "
+										>
+											<FaExternalLinkAlt className="animate-pulse ml-2 m-3" />
+											<small>My Projects</small>
+										</Link>
+									</div>
+								</div>
+								<div className="border border-gray-700 md:border-gray-800 hover:border-gray-600 transition p-10 rounded-lg ">
+									<div className="text-lg font-semibold">
+										Continuous Learning:{" "}
+									</div>
+									<div className="text-gray-400 mt-2">
+										I'm driven to explore new frontend
+										technologies, keeping my coding skills
+										current. Additionally, I'm eager to exp&
+										into full-stack development, enriching
+										my skill set further.
+									</div>
+								</div>
+							</div>
+						</div>
+						{/*EXPERIENCE */}
+						{/*EXPERIENCE */}
+					</div>
+				</div>
 			</div>
+			<Footer />
 		</>
 	);
 }

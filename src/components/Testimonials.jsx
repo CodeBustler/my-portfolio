@@ -25,7 +25,7 @@ function TestimonialCard({
 			setChangeAvatar((prevAvatar) =>
 				prevAvatar === logo ? avatar : logo,
 			);
-		}, 1500);
+		}, 3000);
 
 		return () => clearInterval(intervalId);
 	}, []);

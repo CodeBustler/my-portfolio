@@ -63,6 +63,13 @@ function Navbar({ toggleSideBar, setToggleSideBar }) {
 							</a>
 						))}
 						<Link
+							to="/all_projects"
+							className="capitalize py-3 pl-4 w-[100%] flex items-center gap-3"
+							onClick={tSideBar}
+						>
+							All Projects
+						</Link>
+						<Link
 							to="/about_me"
 							className="capitalize py-3 pl-4 w-[100%] border border-gray-600 border-l-0 border-b-0 border-r-0 border-l-0 mt-3 flex items-center gap-3"
 							onClick={tSideBar}

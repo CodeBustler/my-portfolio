@@ -23,7 +23,7 @@ function TapToTop() {
 
 	return (
 		<div>
-			{scrollTop > 800 && (
+			{scrollTop > 700 && (
 				<FaArrowUp
 					className=" w-10 h-10 bg-yellow-500 p-3 rounded-full shadow-xl fixed bottom-10 right-10 z-50 cursor-pointer text-gray-900 opacity-30 hover:opacity-100 hover:scale-125 transition"
 					onClick={() => window.scrollTo(0, 0)}
