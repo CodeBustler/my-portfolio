@@ -1,13 +1,15 @@
-// ASSETS
-import { MdWork } from "react-icons/md";
-// COMPONENT
 import ProjectPreview from "./ProjectPreview";
 import { useContext } from "react";
 import { MyContext } from "../main";
-
+// ASSETS
+import { MdWork } from "react-icons/md";
 // -------------------------------------------------------------
+
 function PastWork() {
+	// PROJECT PREVIEWS
 	const { abPreview, srsPreview } = useContext(MyContext);
+
+	// -------------------------------------------------------------
 	return (
 		<div className="container mx-auto pt-24 md:pt-28 " id="past_work">
 			<h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold  flex items-end gap-3">

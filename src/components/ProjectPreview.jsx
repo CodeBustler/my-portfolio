@@ -1,7 +1,10 @@
-import React from "react";
+// ASSETS
 import { FaCode } from "react-icons/fa";
 import { TfiWorld } from "react-icons/tfi";
 
+// --------------------------------------------
+// REUSE COMPONENT FOR EVERY PROJECT PREVIEW
+// --------------------------------------------
 function ProjectPreview({
 	video,
 	projectSummary,
@@ -11,6 +14,7 @@ function ProjectPreview({
 	gitHubUrl,
 	projectUrl,
 }) {
+	// --------------------------------------------
 	return (
 		<div className="group relative rounded-xl grid-rows-2 overflow-hidden cursor-pointer">
 			<video src={video} autoPlay muted loop>
