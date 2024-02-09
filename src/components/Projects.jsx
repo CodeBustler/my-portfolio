@@ -1,16 +1,20 @@
+// ROUTER & DOM
+import ProjectPreview from "./ProjectPreview";
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { MyContext } from "../main";
 // ASSETS
 import { MdDashboard } from "react-icons/md";
 import { FaCircleArrowLeft } from "react-icons/fa6";
 import { FaCode } from "react-icons/fa6";
 import { TfiWorld } from "react-icons/tfi";
 import { AiOutlineBars } from "react-icons/ai";
-// ROUTER & DOM
-import ProjectPreview from "./ProjectPreview";
-import { Link } from "react-router-dom";
-import { useContext } from "react";
-import { MyContext } from "../main";
 
+//----------------------------------------------------
+// ********* HERO SECTION PROJECT PREVIWS ***********
+//----------------------------------------------------
 function Projects() {
+	// PROJECT PREVIEWS
 	const {
 		bmPreview,
 		epicPreview,
@@ -21,6 +25,7 @@ function Projects() {
 		srsPreview,
 	} = useContext(MyContext);
 
+	//----------------------------------------------------
 	return (
 		<div className="container mx-auto pt-24 md:pt-28" id="projects">
 			<div className="flex items-center justify-between">

@@ -1,9 +1,12 @@
-import React from "react";
 import { GrTechnology } from "react-icons/gr";
 import { IoMdThumbsUp } from "react-icons/io";
 import { HiCheckCircle } from "react-icons/hi";
+//----------------------------------------------------
 
 function Skills() {
+	//----------------------------------------------------
+	// ******************* SKILLS LIST *******************
+	//----------------------------------------------------
 	const frontEndSkills = [
 		"React JS",
 		"JavaScript",
@@ -26,6 +29,8 @@ function Skills() {
 	];
 
 	const tools = ["Visual Studio Code", "Sublime Text"];
+	//----------------------------------------------------
+
 	return (
 		<div className="container mx-auto pt-24 md:pt-28 " id="skills">
 			<h1 className="text-2xl md:text-3xl lg:text-4xl md:text-4xl font-semibold flex items-end gap-3">
@@ -47,7 +52,9 @@ function Skills() {
 				user experiences.
 			</p>
 
-			{/*FRONTEND SKILLS*/}
+			{/*----------------------------------------------*/}
+			{/************** FRONTEND SKILLS ***************/}
+			{/*----------------------------------------------*/}
 			<div>
 				<h2 className=" mt-8 mb-5 font-semibold text-xl text-gray-500">
 					Front-End
@@ -64,9 +71,10 @@ function Skills() {
 					))}
 				</div>
 			</div>
-			{/*------------------------------*/}
+			{/*----------------------------------------------*/}
+			{/************** BACKEND & CLOUD ***************/}
+			{/*----------------------------------------------*/}
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-				{/*BACKEND CLOUD*/}
 				<div>
 					<h2 className=" mt-10 mb-5 font-semibold text-xl text-gray-500">
 						Backend & Cloud Services
@@ -83,7 +91,9 @@ function Skills() {
 						))}
 					</div>
 				</div>
-				{/*VERSION CONTROL*/}
+				{/*----------------------------------------------*/}
+				{/************** VERSION CONTROL ***************/}
+				{/*----------------------------------------------*/}
 				<div>
 					<h2 className=" mt-0 md:mt-10 mb-5 font-semibold text-xl text-gray-500">
 						Version Control
@@ -100,7 +110,9 @@ function Skills() {
 						))}
 					</div>
 				</div>
-				{/*TOOLS*/}
+				{/*----------------------------------------------*/}
+				{/********************* TOOLS ********************/}
+				{/*----------------------------------------------*/}
 				<div>
 					<h2 className=" mt-0 lg:mt-10 mb-5 font-semibold text-xl text-gray-500">
 						IDE Code Editor
@@ -118,7 +130,6 @@ function Skills() {
 					</div>
 				</div>
 			</div>
-			{/*------------------------------*/}
 		</div>
 	);
 }
