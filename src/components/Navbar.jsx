@@ -1,15 +1,19 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+// ASSETS
 import { FaArrowRightLong } from "react-icons/fa6";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { HiMiniHome } from "react-icons/hi2";
 import { HiOutlineXMark } from "react-icons/hi2";
 import { HiBars3CenterLeft } from "react-icons/hi2";
 import { FaUser } from "react-icons/fa";
+//----------------------------------------------------
 
 function Navbar({ toggleSideBar, setToggleSideBar }) {
 	const [activeLink, setActiveLink] = useState("home");
 
+	//----------------------------------------------------
+	// FOT MAP & STYLING UNDERLINE FOR ACTIVE LINK
 	const navLinks = [
 		{ linkTitle: "projects", link: "#projects" },
 		{ linkTitle: "past work", link: "#past_work" },
@@ -17,15 +21,19 @@ function Navbar({ toggleSideBar, setToggleSideBar }) {
 		{ linkTitle: "testimonials", link: "#testimonials" },
 	];
 
+	//----------------------------------------------------
+	// TOGGLE SIDEBAR (MOBILE)
 	const tSideBar = () => {
 		setToggleSideBar(!toggleSideBar);
 	};
 
+	//----------------------------------------------------
+	// SCROLLTOP
 	const home = () => {
 		window.scrollTo(0, 0);
 		setActiveLink("home");
 	};
-
+	//----------------------------------------------------
 	return (
 		<nav className="relative bg-[#1D2430] text-gray-400 font-semibold flex items-center justify-between px-8 sticky top-0 z-50 ">
 			<div
@@ -38,6 +46,9 @@ function Navbar({ toggleSideBar, setToggleSideBar }) {
 					<RxHamburgerMenu className="text-3xl" />
 				)}
 			</div>
+			{/*----------------------------------------------*/}
+			{/************** SIDEBAR NAV_LINKS ***************/}
+			{/*----------------------------------------------*/}
 			{toggleSideBar ? (
 				<div className=" md:hidden absolute top-16 left-0 p-5 pt-1 pr-8 bg-[#1D2430] rounded-br-2xl shadow-2xl border border-l-0 border-t-0 border-2 border-gray-500">
 					<div className=" md:hidden flex flex-col items-start  ">
@@ -82,7 +93,9 @@ function Navbar({ toggleSideBar, setToggleSideBar }) {
 			) : (
 				""
 			)}
-			{/*NAV_LINKS*/}
+			{/*----------------------------------------------*/}
+			{/****************** NAV_LINKS ******************/}
+			{/*----------------------------------------------*/}
 			<div className="hidden md:flex items-center gap-5  ">
 				<Link
 					to="/"

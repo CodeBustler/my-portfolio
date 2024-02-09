@@ -1,4 +1,3 @@
-import React from "react";
 import { RiMegaphoneFill } from "react-icons/ri";
 
 function HireMe() {
@@ -8,6 +7,9 @@ function HireMe() {
 				<RiMegaphoneFill className="text-gray-500 mb-1" />
 				Hire Me
 			</h1>
+			{/*----------------------------------------------*/}
+			{/**************** FORM CONTAINER ****************/}
+			{/*----------------------------------------------*/}
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-8">
 				<form
 					action="https://formsubmit.co/mallikarjun.mavnoor@gmail.com"
@@ -57,7 +59,9 @@ function HireMe() {
 						</button>
 					</div>
 				</form>
-				{/*GOOGLE-MAP */}
+				{/*----------------------------------------------*/}
+				{/****************** GOOGLE MAP ******************/}
+				{/*----------------------------------------------*/}
 				<div className="mapouter">
 					<div className="gmap_canvas rounded-xl">
 						<div style={{ width: "100%" }}>
