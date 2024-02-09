@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+// ASSETS
 import profile from "../assets/profile.png";
 import { SiHtml5, SiInstagram, SiLinkedin, SiStackblitz } from "react-icons/si";
 import { TfiCss3 } from "react-icons/tfi";
@@ -9,17 +10,20 @@ import { SiTailwindcss } from "react-icons/si";
 import { SiRedux } from "react-icons/si";
 import { SiReactrouter } from "react-icons/si";
 import { MdDownload } from "react-icons/md";
-import Resume from "../assets/MallikarjunResume.pdf";
 import { ImGithub } from "react-icons/im";
 import { BsYoutube } from "react-icons/bs";
 import { RiTwitterXFill } from "react-icons/ri";
+import Resume from "../assets/MallikarjunResume.pdf";
+// ----------------------------------------------------------
 
 function HeroSection() {
 	const [currentPara, setCurrentPara] = useState(1);
 	const [isDownloading, setIsDownloading] = useState(false);
 	const navigateTo = useNavigate();
-	// ------------------------------------------------------------------
 
+	// ----------------------------------------------------------
+	// ****************** SUBTITLE ANIMATION *****************
+	// ----------------------------------------------------------
 	useEffect(() => {
 		window.scrollTo(0, 0);
 		const interval = setInterval(() => {
@@ -30,6 +34,9 @@ function HeroSection() {
 		return () => clearInterval(interval);
 	}, []);
 
+	// ----------------------------------------------------------
+	// ****************** DOWNLOAD ANIMATION *****************
+	// ----------------------------------------------------------
 	const handleDownloadAnimation = (e) => {
 		if (e.target.tagName === "A") {
 			setIsDownloading(true);
@@ -37,11 +44,13 @@ function HeroSection() {
 		}
 	};
 
-	// ------------------------------------------------------------------
+	// ----------------------------------------------------------
 	return (
 		<div className="container mx-auto md:mt-24  ">
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-12  md:mt-0">
-				{/*LEFT CONTAINER -----------------------------------------------------*/}
+				{/*----------------------------------------------*/}
+				{/**************** LEFT CONTAINER ****************/}
+				{/*----------------------------------------------*/}
 				<div className="order-2 md:order-1 flex flex-col  text-center md:text-left md:mb-20 ">
 					<div>
 						<h1 className="text-3xl  md:text-4xl  lg:text-5xl font-semibold ">
@@ -65,6 +74,8 @@ function HeroSection() {
 							)}
 						</div>
 					</div>
+					{/**************** INTRO ****************/}
+
 					<p className="text-gray-300 leading-7 mt-8 ">
 						"Passionate Frontend Web Developer specializing in
 						<span className="font-bold "> React JS</span>,
@@ -76,6 +87,7 @@ function HeroSection() {
 						together."
 					</p>
 
+					{/**************** SOCIAL LINKS ****************/}
 					<div className="flex items-center justify-center md:justify-start text-2xl text-gray-500 mt-4">
 						<a
 							href="https://github.com/codebustler"
@@ -138,6 +150,8 @@ function HeroSection() {
 							/>
 						</a>
 					</div>
+
+					{/**************** BUTTONS ****************/}
 					<div className="flex items-center  justify-between md:justify-start gap-5 mt-6">
 						<a
 							href={Resume}
@@ -160,8 +174,9 @@ function HeroSection() {
 						</Link>
 					</div>
 				</div>
-
-				{/*RIGHT CONTAINER -----------------------------------------------------*/}
+				{/*----------------------------------------------*/}
+				{/*************** RIGHT CONTAINER ***************/}
+				{/*----------------------------------------------*/}
 				<div className="order-1 md:order-2 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-end gap-16 md:gap-24">
 					<div className="relative">
 						<img
@@ -179,6 +194,7 @@ function HeroSection() {
 							title="Tap to know about me!"
 						/>
 					</div>
+					{/*************** TECH LOGOS ***************/}
 					<div className="flex md:flex-col gap-3  text-3xl  md:flex ">
 						<SiHtml5 className="text-orange-400 opacity-30 hover:animate-bounce cursor-pointer" />
 						<TfiCss3 className="text-blue-400 opacity-30 hover:animate-bounce cursor-pointer " />

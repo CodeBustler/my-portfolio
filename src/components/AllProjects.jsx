@@ -6,12 +6,14 @@ import Footer from "./Footer";
 import { BiSubdirectoryRight } from "react-icons/bi";
 import { MdDashboard } from "react-icons/md";
 import { MyContext } from "../main";
-
+// LAZY LOAD
 const ProjectPreview = lazy(() => import("./ProjectPreview"));
 import PreviewFallback from "./PreviewFallback";
+// ----------------------------------------------------
 
 function AllProjects() {
 	const {
+		// PROJECT PREVIEWS
 		bmPreview,
 		epicPreview,
 		imageSearchEnginePreview,
@@ -20,6 +22,8 @@ function AllProjects() {
 		abPreview,
 		srsPreview,
 	} = useContext(MyContext);
+
+	// ----------------------------------------------------
 	return (
 		<>
 			<SeconNavbar />
@@ -30,7 +34,9 @@ function AllProjects() {
 					All Projects
 				</div>
 				<hr className="mt-4 opacity-10" />
-				{/* FREELANCE PROJECTS */}
+				{/*----------------------------------------------*/}
+				{/************* FREELANCE PROJECTS **************/}
+				{/*----------------------------------------------*/}
 				<div className="mt-8">
 					<h2 className="text-2xl text-gray-200  flex items-center gap-3">
 						<BiSubdirectoryRight className="text-4xl text-gray-500 " />
@@ -73,7 +79,9 @@ function AllProjects() {
 						</Suspense>
 					</div>
 				</div>
-				{/* SIDE PROJECTS */}
+				{/*----------------------------------------------*/}
+				{/***************** SIDE PROJECTS ****************/}
+				{/*----------------------------------------------*/}
 				<div className="mt-24">
 					<h2 className="text-2xl text-gray-200 flex items-center gap-3 ">
 						<BiSubdirectoryRight className="text-4xl text-gray-500 " />
