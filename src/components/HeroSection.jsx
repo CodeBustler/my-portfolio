@@ -45,7 +45,7 @@ function HeroSection() {
 				<div className="order-2 md:order-1 flex flex-col  text-center md:text-left md:mb-20 ">
 					<div>
 						<h1 className="text-3xl  md:text-4xl  lg:text-5xl font-semibold ">
-							Hi, I'm Mallikarjun
+							Hi, I'm CodeBustler
 						</h1>
 						<div className="text-2xl   lg:text-3xl text-gray-400 mt-2">
 							{currentPara === 1 && (
