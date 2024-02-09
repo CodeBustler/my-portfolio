@@ -9,33 +9,54 @@ function HireMe() {
 				Hire Me
 			</h1>
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-8">
-				<div className="text-lg text-gray-200 flex flex-col gap-5">
+				<form
+					action="https://formsubmit.co/mallikarjun.mavnoor@gmail.com"
+					method="POST"
+					className="text-lg text-gray-200 flex flex-col gap-5"
+				>
 					<input
 						type="text"
+						name="Name"
+						required
 						placeholder="Name"
 						className="bg-[#1D2430] rounded-md px-5 py-3 "
 					/>
 					<input
 						type="email"
+						name="Email"
+						required
 						placeholder="Email Id"
+						className="bg-[#1D2430] rounded-md px-5 py-3 "
+					/>{" "}
+					<input
+						type="tel"
+						name="Phone"
+						placeholder="Phone (Optional)"
 						className="bg-[#1D2430] rounded-md px-5 py-3 "
 					/>
 					<textarea
-						name="message"
+						name="Message"
+						required
 						placeholder="Message"
 						cols="30"
-						rows="7"
+						rows="5"
 						className="bg-[#1D2430] rounded-md px-5 py-4 "
 					></textarea>
 					<div className="flex items-center  gap-5  mt-2">
-						<button className=" px-10 py-2 rounded-lg bg-green-600 active:bg-green-700  whitespace-nowrap transition w-[50%] md:w-auto">
+						<button
+							type="submit"
+							className=" px-10 py-2 rounded-lg bg-green-600 active:bg-green-700  whitespace-nowrap transition w-[50%] md:w-auto"
+						>
 							Submit
 						</button>
-						<button className=" px-10 py-2 rounded-lg bg-gray-600 active:bg-gray-700  whitespace-nowrap w-[50%] md:w-auto">
+						<button
+							type="reset"
+							className=" px-10 py-2 rounded-lg bg-gray-600 active:bg-gray-700  whitespace-nowrap w-[50%] md:w-auto"
+						>
 							Reset
 						</button>
 					</div>
-				</div>
+				</form>
 				{/*GOOGLE-MAP */}
 				<div className="mapouter">
 					<div className="gmap_canvas rounded-xl">

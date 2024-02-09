@@ -9,7 +9,25 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import { BsYoutube } from "react-icons/bs";
 import { SiInstagram } from "react-icons/si";
 import { FaLink } from "react-icons/fa6";
+import { PiPhoneCallFill } from "react-icons/pi";
+import { MdEmail } from "react-icons/md";
+import { IoLogoLinkedin } from "react-icons/io5";
+import { MdLocationOn } from "react-icons/md";
 import Footer from "./Footer";
+import TapToTop from "./TapToTop";
+
+function ContactLinks({ link, title, children }) {
+	return (
+		<a
+			href={link}
+			target="_blank"
+			title={title} // Change here
+			className="border border-gray-700 md:border-gray-800 hover:border-gray-600 transition p-5 rounded-lg flex items-center gap-3 cursor-pointer text-gray-400 hover:text-white"
+		>
+			{children}
+		</a>
+	);
+}
 
 function AboutMe() {
 	return (
@@ -154,11 +172,54 @@ function AboutMe() {
 								</div>
 							</div>
 						</div>
-						{/*EXPERIENCE */}
-						{/*EXPERIENCE */}
+						{/*CONTACT ME */}
+						<div className="container mt-16">
+							<h1 className="text-2xl md:text-3xl  font-semibold  flex items-end gap-3">
+								<PiPhoneCallFill className="text-gray-500 mb-1 scale-110" />
+								Contact Me
+							</h1>
+							<div className="grid grid-cols-1 md:grid-cols-2 gap-6 leading-7 mt-7">
+								<ContactLinks
+									link={
+										"mailto:mallikarjun.mavnoor@gmail.com"
+									}
+									title={"mallikarjun.mavnoor@gmail.com"}
+								>
+									<MdEmail className="text-2xl text-purple-500" />
+									<div>Send a mail</div>
+								</ContactLinks>
+								<ContactLinks
+									link={
+										"https://www.linkedin.com/in/mallikarjun-mavnoor"
+									}
+									title={"@mallikarjun-mavnoor"}
+								>
+									<IoLogoLinkedin className="text-2xl text-blue-500" />
+									LinkedIn
+								</ContactLinks>
+								<ContactLinks
+									link={
+										"https://www.instagram.com/codebustler"
+									}
+									title={"@CodeBustler"}
+								>
+									<SiInstagram
+										className="text-xl text-pink-500
+									"
+									/>
+									Instagram
+								</ContactLinks>
+
+								<ContactLinks>
+									<MdLocationOn className="text-2xl text-orange-500" />
+									Hyderabad, India
+								</ContactLinks>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
+			<TapToTop />
 			<Footer />
 		</>
 	);
