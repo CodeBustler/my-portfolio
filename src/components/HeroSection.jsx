@@ -41,11 +41,12 @@ function HeroSection() {
 	return (
 		<div className="container mx-auto md:mt-24  ">
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-12  md:mt-0">
+				s
 				{/*LEFT CONTAINER -----------------------------------------------------*/}
 				<div className="order-2 md:order-1 flex flex-col  text-center md:text-left md:mb-20 ">
 					<div>
 						<h1 className="text-3xl  md:text-4xl  lg:text-5xl font-semibold ">
-							Hi, I'm CodeBustler
+							Hi, I'm Mallikarjun
 						</h1>
 						<div className="text-2xl   lg:text-3xl text-gray-400 mt-2">
 							{currentPara === 1 && (
@@ -160,7 +161,6 @@ function HeroSection() {
 						</Link>
 					</div>
 				</div>
-
 				{/*RIGHT CONTAINER -----------------------------------------------------*/}
 				<div className="order-1 md:order-2 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-end gap-16 md:gap-24">
 					<div className="relative">
