@@ -1,7 +1,9 @@
-import React from "react";
-import { FaUser } from "react-icons/fa";
+import Footer from "./Footer";
+import TapToTop from "./TapToTop";
 import SeconNavbar from "./SeconNavbar";
+// ICONS
 import profile2 from "../assets/profile2.png";
+import { FaUser } from "react-icons/fa";
 import { HiComputerDesktop } from "react-icons/hi2";
 import { PiHandWavingFill } from "react-icons/pi";
 import { Link } from "react-router-dom";
@@ -13,9 +15,8 @@ import { PiPhoneCallFill } from "react-icons/pi";
 import { MdEmail } from "react-icons/md";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { MdLocationOn } from "react-icons/md";
-import Footer from "./Footer";
-import TapToTop from "./TapToTop";
 
+//-----------------------------------------------------
 function ContactLinks({ link, title, children }) {
 	return (
 		<a
@@ -29,6 +30,7 @@ function ContactLinks({ link, title, children }) {
 	);
 }
 
+//-----------------------------------------------------
 function AboutMe() {
 	return (
 		<>
@@ -49,7 +51,9 @@ function AboutMe() {
 						className="w-[250px] h-[250px] saturate-[1.1] filter contrast-[1.1] sticky lg:top-24"
 					/>
 					<div>
-						{/*INTRO */}
+						{/*----------------------------------------------*/}
+						{/******************** INTRO *********************/}
+						{/*----------------------------------------------*/}
 						<p className="text-gray-400 leading-7">
 							<span className="text-2xl text-gray-300 ">
 								<PiHandWavingFill className="inline mb-1 rotate-12 " />{" "}
@@ -72,7 +76,9 @@ function AboutMe() {
 							center websites with BigRock. Let's collaborate and
 							bring your digital projects to life.
 						</p>
-						{/*What i Do ? */}
+						{/*----------------------------------------------*/}
+						{/***************** WHAT I DO ? ******************/}
+						{/*----------------------------------------------*/}
 						<div className="container mt-16">
 							<h1 className="text-2xl md:text-3xl  font-semibold  flex items-end gap-3">
 								<HiComputerDesktop className="text-gray-500 mb-1" />
@@ -172,7 +178,10 @@ function AboutMe() {
 								</div>
 							</div>
 						</div>
-						{/*CONTACT ME */}
+
+						{/*----------------------------------------------*/}
+						{/***************** CONTACT ME ******************/}
+						{/*----------------------------------------------*/}
 						<div className="container mt-16">
 							<h1 className="text-2xl md:text-3xl  font-semibold  flex items-end gap-3">
 								<PiPhoneCallFill className="text-gray-500 mb-1 scale-110" />
