@@ -5,4 +5,8 @@ By using React JS, Tailwind CSS & React Router | React-Icons
 https://portfolio-codebustler.netlify.app/
 
 ## Screenshot
-(https://i.postimg.cc/vH31RC0b/portfolio.gif)
+![App Screenshot](https://i.postimg.cc/Vktc9Crp/1.png)
+![App Screenshot](https://i.postimg.cc/8CVgZzL5/2.png)
+![App Screenshot](https://i.postimg.cc/yd14zpQC/3.png)
+
+& more...
