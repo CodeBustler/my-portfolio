@@ -5,6 +5,8 @@ import Footer from "../Footer";
 import { MdDashboard } from "react-icons/md";
 import FreelaceProjects from "./FreelaceProjects";
 import SideProjects from "./SideProjects";
+import MiniProjects from "./MiniProjects";
+
 // ----------------------------------------------------
 
 function AllProjects() {
@@ -20,11 +22,12 @@ function AllProjects() {
 				</div>
 				<hr className="mt-4 opacity-10" />
 
-				{/***************** FREELANCE PROJECTS ****************/}
+				{/*PROJECTS*/}
 				<FreelaceProjects />
-
-				{/***************** SIDE PROJECTS ****************/}
 				<SideProjects />
+				<MiniProjects />
+				{/*------------*/}
+
 				<TapToTop />
 			</div>
 			<Footer />

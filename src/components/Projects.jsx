@@ -1,8 +1,8 @@
-// ROUTER & DOM
-import ProjectPreview from "./ProjectPreview";
-import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { lazy, Suspense, useContext } from "react";
 import { MyContext } from "../main";
+import { Link } from "react-router-dom";
+const ProjectPreview = lazy(() => import("./ProjectPreview"));
+import PreviewFallback from "./PreviewFallback";
 // ASSETS
 import { MdDashboard } from "react-icons/md";
 import { FaCircleArrowLeft } from "react-icons/fa6";
@@ -21,9 +21,63 @@ function Projects() {
 		imageSearchEnginePreview,
 		infinityImageSliderPreview,
 		tributePreview,
-		abPreview,
-		srsPreview,
+		htmlCheatsheetPreview,
+		portfolioPreview,
+		qrCodePreview,
+		todoListPreview,
+		movieSearchPreview,
 	} = useContext(MyContext);
+
+	const sideProjectsDetailsRow1 = [
+		{
+			video: bmPreview,
+			projectSummary: "BlinkMart E-Commerce| ReactJS web app Demo",
+			projectTitle: "BlinkMart | E-Commerce",
+			projectType: "E-Commerce Web App ",
+			technologies: "React JS, Router, Tailwind CSS, & Firebase",
+			gitHubUrl: "https://github.com/CodeBustler/blinkmart_eCommerce",
+			projectUrl: "https://blinkmart.netlify.app/",
+		},
+		{
+			video: epicPreview,
+			projectSummary: "Epic News | ReactJS web app Demo",
+			projectTitle: "Epic News | Realtime",
+			projectType: "News Web App",
+			technologies: "React JS & BootStrap 5 (NewsApi.org)",
+			gitHubUrl: "https://github.com/CodeBustler/epicNews",
+			projectUrl: "https://epic-news-cb.netlify.app/",
+		},
+	];
+
+	const sideProjectsDetailsRow2 = [
+		{
+			video: tributePreview,
+			projectSummary: "Tribute Page - Iron Man | Demo",
+			projectTitle: "Iron Man | SuperHero",
+			// projectType: "Tribute Page",
+			// technologies: "HTML & CSS",
+			gitHubUrl: "https://github.com/CodeBustler/tribute-page-ironman",
+			projectUrl: "https://tribute-ironman.netlify.app/",
+		},
+		{
+			video: imageSearchEnginePreview,
+			projectSummary: "Image Search Engine | Demo",
+			projectTitle: "Image Search Engine",
+			// projectType: "Search Functionality",
+			// technologies: "HTML, CSS & JavaScript",
+			gitHubUrl: "https://github.com/CodeBustler/image-search-engine",
+			projectUrl: "https://codebustler.github.io/image-search-engine/",
+		},
+		{
+			video: movieSearchPreview,
+			projectSummary: "Movie Search React App | Demo",
+			projectTitle: "Movie Search | ReactJS",
+			// projectType: "Fetching Data | OMDB API",
+			// technologies: "React JS & Bootstrap",
+			gitHubUrl: "https://github.com/CodeBustler/movie-search-react",
+			projectUrl: "https://movie-search-react-cb.netlify.app/",
+		},
+	];
 
 	//----------------------------------------------------
 	return (
@@ -42,61 +96,34 @@ function Projects() {
 			</div>
 
 			<div className="grid grid-cols-1 md:grid-cols-2  gap-10 mt-12">
-				{/*PREVIEW */}
-				<ProjectPreview
-					video={bmPreview}
-					projectSummary={
-						"BlinkMart E-Commerce| ReactJS web app Demo"
-					}
-					projectTitle={"BlinkMart | E-Commerce"}
-					projectType={"E-Commerce Web App "}
-					technologies={"React JS, Router, Tailwind CSS, & Firebase"}
-					gitHubUrl={
-						"https://github.com/CodeBustler/blinkmart_eCommerce"
-					}
-					projectUrl={"https://blinkmart.netlify.app/"}
-				/>
-				<ProjectPreview
-					video={epicPreview}
-					projectSummary={"Epic News | ReactJS web app Demo"}
-					projectTitle={"Epic News | Realtime"}
-					projectType={"News Web App"}
-					technologies={"React JS & BootStrap 5 (NewsApi.org)"}
-					gitHubUrl={"https://github.com/CodeBustler/epicNews"}
-					projectUrl={"https://epic-news-cb.netlify.app/"}
-				/>
+				{sideProjectsDetailsRow1.map((project, index) => (
+					<Suspense fallback={<PreviewFallback />} key={index}>
+						<ProjectPreview
+							video={project.video}
+							projectSummary={project.projectSummary}
+							projectTitle={project.projectTitle}
+							projectType={project.projectType}
+							technologies={project.technologies}
+							gitHubUrl={project.gitHubUrl}
+							projectUrl={project.projectUrl}
+						/>
+					</Suspense>
+				))}
 			</div>
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
-				<ProjectPreview
-					video={imageSearchEnginePreview}
-					projectSummary={"Image Search Engine | Demo"}
-					projectTitle={"Image Search Engine"}
-					gitHubUrl={
-						"https://github.com/CodeBustler/image-search-engine"
-					}
-					projectUrl={"https://image-search-engine-cb.netlify.app/"}
-				/>
-				<ProjectPreview
-					video={tributePreview}
-					projectSummary={"Iron Man Tribute Demo | HTML & CSS"}
-					projectTitle={"Iron Man | Tribute Page"}
-					gitHubUrl={
-						"https://github.com/CodeBustler/tribute-page-ironman"
-					}
-					projectUrl={"https://tribute-ironman.netlify.app/"}
-				/>
-
-				<ProjectPreview
-					video={infinityImageSliderPreview}
-					projectSummary={
-						"Infinity Images Slider Demo | HTML, CSS & JavaScript"
-					}
-					projectTitle={"Infinity Images | Slider"}
-					gitHubUrl={
-						"https://github.com/CodeBustler/infinity-image-slider"
-					}
-					projectUrl={"https://infinity-images-slider.netlify.app/"}
-				/>
+				{sideProjectsDetailsRow2.map((project, index) => (
+					<Suspense fallback={<PreviewFallback />} key={index}>
+						<ProjectPreview
+							video={project.video}
+							projectSummary={project.projectSummary}
+							projectTitle={project.projectTitle}
+							projectType={project.projectType}
+							technologies={project.technologies}
+							gitHubUrl={project.gitHubUrl}
+							projectUrl={project.projectUrl}
+						/>
+					</Suspense>
+				))}
 			</div>
 		</div>
 	);
