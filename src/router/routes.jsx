@@ -7,7 +7,7 @@ import App from "../App";
 import RootLayout from "./RootLayout";
 import NoPage from "../components/NoPage";
 import AboutMe from "../components/AboutMe";
-import AllProjects from "../components/AllProjects";
+import AllProjects from "../components/AllProjects/AllProjects";
 
 export const routes = createBrowserRouter(
 	createRoutesFromElements(
