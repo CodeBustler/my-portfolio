@@ -9,6 +9,7 @@ import { MyContext } from "../../main";
 //----------------------------------------------
 function MiniProjects() {
 	const {
+		// PROJECT PREVIEWS (mp4)
 		calcPreview,
 		cbPreview,
 		checklistPreview,

@@ -14,8 +14,8 @@ import { AiOutlineBars } from "react-icons/ai";
 // ********* HERO SECTION PROJECT PREVIWS ***********
 //----------------------------------------------------
 function Projects() {
-	// PROJECT PREVIEWS
 	const {
+		// PROJECT PREVIEWS (mp4)
 		bmPreview,
 		epicPreview,
 		imageSearchEnginePreview,

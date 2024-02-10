@@ -6,6 +6,7 @@ import { BiSubdirectoryRight } from "react-icons/bi";
 
 function SideProjects() {
 	const {
+		// PROJECT PREVIEWS (mp4)s
 		bmPreview,
 		epicPreview,
 		imageSearchEnginePreview,

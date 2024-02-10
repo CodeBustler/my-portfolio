@@ -17,9 +17,8 @@ function ProjectPreview({
 	// --------------------------------------------
 	return (
 		<div className="group relative rounded-xl grid-rows-2 overflow-hidden cursor-pointer">
-			<video src={video} autoPlay muted loop>
-				{projectSummary}
-			</video>
+			{video ? console.log("Hello") : ""}
+			<video src={video}>{projectSummary}</video>
 			<div className="absolute top-0 w-full h-full backdrop-blur hidden group-hover:grid place-items-center transition">
 				<div className="flex flex-col items-center gap-8 lg:gap-4 text-center">
 					<div className="flex items-center flex-col">

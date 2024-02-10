@@ -8,6 +8,7 @@ import { MyContext } from "../../main";
 //************* FREELANCE PROJECTS **************
 //----------------------------------------------
 function FreelaceProjects() {
+	// PROJECT PREVIEWS (mp4)
 	const { abPreview, srsPreview } = useContext(MyContext);
 
 	const freelanceProjectsDetails = [

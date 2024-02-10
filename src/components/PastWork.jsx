@@ -8,6 +8,7 @@ import { MdWork } from "react-icons/md";
 // -------------------------------------------------------------
 
 function PastWork() {
+	// PROJECT PREVIEWS (mp4)
 	const { abPreview, srsPreview } = useContext(MyContext);
 
 	const freelanceProjectsDetails = [
