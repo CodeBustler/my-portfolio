@@ -3,9 +3,9 @@ import { FaCode } from "react-icons/fa";
 import { TfiWorld } from "react-icons/tfi";
 
 // --------------------------------------------
-// REUSE COMPONENT FOR EVERY PROJECT PREVIEW
+// REUSE COMPONENT FOR EVERY PROJECT PREVIEW (MOBILE)
 // --------------------------------------------
-function ProjectPreview({
+function ProjectPreviewSM({
 	video,
 	projectSummary,
 	projectTitle,
@@ -17,9 +17,7 @@ function ProjectPreview({
 	// --------------------------------------------
 	return (
 		<div className="group relative rounded-xl grid-rows-2 overflow-hidden cursor-pointer">
-			<video src={video} autoPlay muted loop>
-				{projectSummary}
-			</video>
+			<video src={video}>{projectSummary}</video>
 
 			<div className="absolute top-0 w-full h-full backdrop-blur hidden group-hover:grid place-items-center transition">
 				<div className="flex flex-col items-center gap-8 lg:gap-4 text-center">
@@ -71,4 +69,4 @@ function ProjectPreview({
 	);
 }
 
-export default ProjectPreview;
+export default ProjectPreviewSM;

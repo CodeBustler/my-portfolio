@@ -1,9 +1,9 @@
-import React, { lazy, Suspense, useContext } from "react";
+import React, { lazy, Suspense, useContext, useEffect, useState } from "react";
 const ProjectPreview = lazy(() => import("../ProjectPreview"));
 import PreviewFallback from "../PreviewFallback";
 import { BiSubdirectoryRight } from "react-icons/bi";
 import { MyContext } from "../../main";
-
+import ProjectPreviewSM from "../ProjectPreviewSM";
 //----------------------------------------------
 //************* MINI PROJECTS **************
 //----------------------------------------------
@@ -28,7 +28,7 @@ function MiniProjects() {
 		skillBarPreview,
 		tipPreview,
 	} = useContext(MyContext);
-
+	const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 	//----------------------------------------------
 	const miniProjectsDetails = [
 		{
@@ -143,6 +143,20 @@ function MiniProjects() {
 		},
 	];
 
+	useEffect(() => {
+		const handleResize = () => {
+			setScreenWidth(window.innerWidth);
+		};
+
+		window.addEventListener("resize", handleResize);
+
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		};
+	}, []);
+
+	// 768
+
 	//----------------------------------------------
 
 	return (
@@ -150,18 +164,28 @@ function MiniProjects() {
 			<div className="mt-24">
 				<h2 className="text-2xl text-gray-200  flex items-center gap-3">
 					<BiSubdirectoryRight className="text-4xl text-gray-500 " />
-					Mini Projects
+					Mini Projects {screenWidth}
 				</h2>
 				<div className="grid grid-cols-1 md:grid-cols-3  gap-10 mt-8">
 					{miniProjectsDetails.map((project, index) => (
 						<Suspense fallback={<PreviewFallback />} key={index}>
-							<ProjectPreview
-								video={project.video}
-								projectSummary={project.projectSummary}
-								projectTitle={project.projectTitle}
-								gitHubUrl={project.gitHubUrl}
-								projectUrl={project.projectUrl}
-							/>
+							{screenWidth < 768 ? (
+								<ProjectPreviewSM
+									video={project.video}
+									projectSummary={project.projectSummary}
+									projectTitle={project.projectTitle}
+									gitHubUrl={project.gitHubUrl}
+									projectUrl={project.projectUrl}
+								/>
+							) : (
+								<ProjectPreview
+									video={project.video}
+									projectSummary={project.projectSummary}
+									projectTitle={project.projectTitle}
+									gitHubUrl={project.gitHubUrl}
+									projectUrl={project.projectUrl}
+								/>
+							)}
 						</Suspense>
 					))}
 				</div>
