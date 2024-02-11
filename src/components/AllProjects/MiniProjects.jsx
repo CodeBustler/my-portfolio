@@ -164,7 +164,7 @@ function MiniProjects() {
 			<div className="mt-24">
 				<h2 className="text-2xl text-gray-200  flex items-center gap-3">
 					<BiSubdirectoryRight className="text-4xl text-gray-500 " />
-					Mini Projects {screenWidth}
+					Mini Projects
 				</h2>
 				<div className="grid grid-cols-1 md:grid-cols-3  gap-10 mt-8">
 					{miniProjectsDetails.map((project, index) => (
