@@ -48,7 +48,7 @@ function SideProjects() {
 			projectType: "Search Functionality",
 			technologies: "HTML, CSS & JavaScript",
 			gitHubUrl: "https://github.com/CodeBustler/image-search-engine",
-			projectUrl: "https://codebustler.github.io/image-search-engine/",
+			projectUrl: "https://image-search-engine-cb.netlify.app/",
 		},
 		{
 			video: todoListPreview,
