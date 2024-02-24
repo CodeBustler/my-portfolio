@@ -77,7 +77,11 @@ function HeroSection() {
 					{/**************** INTRO ****************/}
 
 					<p className="text-gray-300 leading-7 mt-8 ">
-						"Passionate Frontend Web Developer specializing in
+						"Passionate Frontend Web Developer with{" "}
+						<span className="font-bold ">
+							3 years of experience
+						</span>
+						, specializing in
 						<span className="font-bold "> React JS</span>,
 						Successfully delivered{" "}
 						<span className="font-bold capitalize">freelance</span>{" "}
