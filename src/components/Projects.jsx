@@ -126,7 +126,7 @@ function Projects() {
 					</Suspense>
 				))}
 			</div>
-					<hr className="mt-10 opacity-30"/>
+			<hr className="mt-10 opacity-30"/>
 			<div className="grid grid-cols-1 md:grid-cols-2  gap-10 mt-12">
 				{sideProjectsDetailsRow1.map((project, index) => (
 					<Suspense fallback={<PreviewFallback />} key={index}>
