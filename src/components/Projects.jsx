@@ -110,7 +110,6 @@ function Projects() {
 					<FaCircleArrowLeft className="text-2xl md:text-3xl text-[#F6CD0A]  animate-pulse" />
 				</Link>
 			</div>
-
 			<div className="grid grid-cols-1 md:grid-cols-2   gap-10 mt-12">
 				{microsoftProjects.map((project, index) => (
 					<Suspense fallback={<PreviewFallback />} key={index}>
@@ -127,6 +126,7 @@ function Projects() {
 				))}
 			</div>
 			<hr className="mt-10 opacity-30"/>
+			<h2 className="text-gray-500 text-xl mt-4">Personal Projects</h2>
 			<div className="grid grid-cols-1 md:grid-cols-2  gap-10 mt-12">
 				{sideProjectsDetailsRow1.map((project, index) => (
 					<Suspense fallback={<PreviewFallback />} key={index}>
