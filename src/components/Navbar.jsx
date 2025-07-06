@@ -16,12 +16,12 @@ function Navbar({ toggleSideBar, setToggleSideBar }) {
 	// FOT MAP & STYLING UNDERLINE FOR ACTIVE LINK
 	const navLinks = [
 		{ linkTitle: "projects", link: "#projects" },
-		{ linkTitle: "past work", link: "#past_work" },
+		{ linkTitle: "Work Experience", link: "#work" },
 		{ linkTitle: "skills", link: "#skills" },
 		{ linkTitle: "testimonials", link: "#testimonials" },
 	];
 
-	//----------------------------------------------------
+	//----------------------------------------------.------
 	// TOGGLE SIDEBAR (MOBILE)
 	const tSideBar = () => {
 		setToggleSideBar(!toggleSideBar);

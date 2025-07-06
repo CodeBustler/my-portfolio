@@ -16,17 +16,33 @@ import { AiOutlineBars } from "react-icons/ai";
 function Projects() {
 	const {
 		// PROJECT PREVIEWS (mp4)
+		edgeVideo,
+		bingVideo,
 		bmPreview,
 		epicPreview,
 		imageSearchEnginePreview,
-		infinityImageSliderPreview,
 		tributePreview,
-		htmlCheatsheetPreview,
-		portfolioPreview,
-		qrCodePreview,
-		todoListPreview,
 		movieSearchPreview,
 	} = useContext(MyContext);
+
+	const microsoftProjects = [
+		{
+			video: edgeVideo,
+			projectSummary: "Edge browser welcome page for customize themes & more",
+			projectTitle: "Microsoft Edge Browser Feature",
+			projectType: "Edge Themes & More ",
+			technologies: "Feature Shipped Live => edge://customize",
+			projectUrl: "edge://customize",
+		},
+		{
+			video: bingVideo,
+			projectSummary: "Table Header With Animation",
+			projectTitle: "Bing | Sports Segment",
+			projectType: "Table Header With Animation",
+			technologies: "Feature Shipped Live",
+			projectUrl: "https://www.bing.com/search?q=epl+standing",
+		},
+	];
 
 	const sideProjectsDetailsRow1 = [
 		{
@@ -95,6 +111,22 @@ function Projects() {
 				</Link>
 			</div>
 
+			<div className="grid grid-cols-1 md:grid-cols-2   gap-10 mt-12">
+				{microsoftProjects.map((project, index) => (
+					<Suspense fallback={<PreviewFallback />} key={index}>
+						<ProjectPreview
+							video={project.video}
+							projectSummary={project.projectSummary}
+							projectTitle={project.projectTitle}
+							projectType={project.projectType}
+							technologies={project.technologies}
+							gitHubUrl={project.gitHubUrl}
+							projectUrl={project.projectUrl}
+						/>
+					</Suspense>
+				))}
+			</div>
+					<hr className="mt-10 opacity-30"/>
 			<div className="grid grid-cols-1 md:grid-cols-2  gap-10 mt-12">
 				{sideProjectsDetailsRow1.map((project, index) => (
 					<Suspense fallback={<PreviewFallback />} key={index}>

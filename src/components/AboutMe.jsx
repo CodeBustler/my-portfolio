@@ -71,11 +71,9 @@ function AboutMe() {
 							<span className=" underline underline-offset-4 font-semibold">
 								JavaScript & React.js.
 							</span>
-							&nbsp;I've built web applications & collaborated on
-							freelance projects, including launching two call
-							center websites with BigRock. Let's collaborate and
-							bring your digital projects to life.
 						</p>
+						<ul className="text-gray-400 leading-7 list-disc list-inside pt-5"><li>Worked with Microsoft on feature development for the Edge browser — one of my contributions is live at <a target="_blank" href="edge://customize" className="font-semibold text-blue-400">edge://customize</a>.</li>
+							<li>Built web apps and launched two call center websites as a freelancer via BigRock.</li></ul>
 						{/*----------------------------------------------*/}
 						{/***************** WHAT I DO ? ******************/}
 						{/*----------------------------------------------*/}

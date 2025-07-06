@@ -48,14 +48,14 @@ function ProjectPreview({
 					</div>
 
 					<div className="flex flex-wrap items-center justify-center gap-3">
-						<a
+						{gitHubUrl && (<a
 							href={gitHubUrl}
 							target="blank"
 							className="bg-[#121723]  text-gray-300  py-2 w-[100px] rounded-lg flex items-center justify-center gap-2 hover:outline hover:outline-yellow-500"
 						>
 							<FaCode className="text-yellow-400" />
 							Code
-						</a>
+						</a>)}
 						<a
 							href={projectUrl}
 							target="blank"

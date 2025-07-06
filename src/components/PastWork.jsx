@@ -34,62 +34,78 @@ function PastWork() {
 		},
 	];
 
+	const dailyWork = {
+		microsoft: [
+			"Worked on Microsoft Edge browser’s welcome page and Bing sports-related segments.",
+			"Participated in daily standups, sprint planning, and Scrum meetings.",
+			"Gathered requirements and contributed to frontend development.",
+			"Built reusable components in React and Web Component for cross-team use, including Edge Settings.",
+			"Integrated APIs for data fetching and updates.",
+			"Collaborated with UI/UX designers to ensure user-friendly interfaces.",
+			"Worked with QA teams to identify and fix bugs."
+		],
+		springInfotech: [
+			"Actively participated in Scrum meetings, daily standups, and sprint planning sessions.",
+			"Gathered requirements and contributed to coding efforts.",
+			"Developed reusable React components to optimize code efficiency.",
+			"Integrated APIs to facilitate data fetching and updating within applications.",
+			"Collaborated closely with UI/UX designers to ensure user-friendly interfaces.",
+			"Worked with QA teams to identify and resolve bugs effectively.",
+			"Managed deployment and releases using Git across different environments."
+		]
+	};
+
 	// -------------------------------------------------------------
 	return (
 		<div
 			className="container mx-auto pt-24 md:pt-28 font-semibold"
-			id="past_work"
+			id="work"
 		>
 			<h1 className="text-2xl md:text-3xl lg:text-4xl   flex items-end gap-3">
 				<MdWork className="text-gray-500 mb-1" />
-				Past Work
+				Work Experience
 			</h1>
 			<div>
 				<div className="text-gray-500 text-2xl mt-6 underline underline-offset-8">
 					Current Employment
 				</div>
 				<div className="text-gray-300 leading-7 m-4">
-					<h2 className="font-semibold text-lg">
+					<h2 className="font-light text-md tracking-widest border inline-block border-1 border-yellow-400 rounded-lg pl-2 pr-2 mb-2">
 						FrontEnd Developer
 					</h2>
-					<div className="text-gray-500 text-md">
-						@Spring Infotech Pvt Ltd | Mar'2021 - Present
+					<div className="text-gray-500 text-lg">
+						@Innominds Software Pvt Ltd - Worked at Microsoft as a vendor | Apr'2024 - Present
 					</div>
 					<ul className="font-normal list-disc ml-6 mt-2">
-						<li>
-							Actively participate in scrum master meetings/daily
-							standup meetings, and sprint planning sessions.
-						</li>
-						<li>
-							Gather requirements and contribute to coding
-							efforts.
-						</li>
-						<li>
-							Develop reusable React components to optimize code
-							efficiency.
-						</li>
-						<li>
-							Integrate APIs to facilitate data fetching and
-							updating within applications.
-						</li>
-						<li>
-							Collaborate closely with UI/UX designers to ensure
-							user-friendly interfaces.
-						</li>
-						<li>
-							Work with QA teams to identify and resolve bugs
-							effectively.
-						</li>
-						<li>
-							Manage deployment and releases using Git across
-							different environments.
-						</li>
+						{dailyWork.microsoft.map((task, index) => (
+							<li key={`microsoft-${index}`}>{task}</li>
+						))}
+					</ul>
+
+				</div>
+			</div>
+			<div>
+				<div className="text-gray-500 text-2xl mt-6 underline underline-offset-8">
+					Past Employment
+				</div>
+				<div className="text-gray-300 leading-7 m-4">
+					<h2 className="font-light text-md tracking-widest border inline-block border-1 border-yellow-400 rounded-lg pl-2 pr-2 mb-2 ">
+						FrontEnd Developer
+					</h2>
+					<div className="text-gray-500 text-lg">
+						@Spring Infotech Pvt Ltd | Mar'2021 - Apr'2024
+					</div>
+					<ul className="font-normal list-disc ml-6 mt-2">
+					{dailyWork.springInfotech.map((task, index) => (
+							<li key={`microsoft-${index}`}>{task}</li>
+						))}
 					</ul>
 				</div>
 			</div>
 			<div className="text-gray-500 text-2xl mt-10 underline underline-offset-8">
 				Freelance Work
 			</div>
+
 			<div className="text-gray-300 leading-7 m-4">
 				<h2 className="font-semibold text-lg flex items-center gap-3">
 					FrontEnd Developer

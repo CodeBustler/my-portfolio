@@ -40,6 +40,8 @@ import notePreview from "./assets/project_previews/miniProjects/note.mp4";
 import productLandingPreview from "./assets/project_previews/miniProjects/productLanding.mp4";
 import skillBarPreview from "./assets/project_previews/miniProjects/skillBar.mp4";
 import tipPreview from "./assets/project_previews/miniProjects/tip.mp4";
+import edgeVideo from "./assets/project_previews/edgeVideo.mp4"
+import bingVideo from "./assets/project_previews/bingVideo.mp4"
 
 export const MyContext = React.createContext();
 
@@ -47,6 +49,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <MyContext.Provider
       value={{
+        edgeVideo,
+        bingVideo,
         // FREELANCE PROJECTSs
         abPreview,
         srsPreview,

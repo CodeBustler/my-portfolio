@@ -77,18 +77,7 @@ function HeroSection() {
 					{/**************** INTRO ****************/}
 
 					<p className="text-gray-300 leading-7 mt-8 ">
-						"Passionate Frontend Web Developer with{" "}
-						<span className="font-bold ">
-							3 years of experience
-						</span>
-						, specializing in
-						<span className="font-bold "> React JS</span>,
-						Successfully delivered{" "}
-						<span className="font-bold capitalize">freelance</span>{" "}
-						projects with expertise in HTML, CSS, and JavaScript.
-						Transforming ideas into seamless, user-friendly
-						experiences, Let's build something extraordinary
-						together."
+					Frontend Web Developer with <span className="font-bold">4+ years</span>  of experience in <span className="font-bold"> React JS & Web Components</span>. Delivered a live feature for <span className="font-bold">Microsoft Edge Browser</span>  completed multiple freelance projects. Skilled in React, HTML, CSS, JavaScript & Web Components, focused on creating smooth, user-friendly experiences !
 					</p>
 
 					{/**************** SOCIAL LINKS ****************/}

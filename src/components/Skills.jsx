@@ -8,21 +8,21 @@ function Skills() {
 	// ******************* SKILLS LIST *******************
 	//----------------------------------------------------
 	const frontEndSkills = [
+		"Web Components",
+		"MS Fluent UI",
+		"MS Fast-Element",
 		"React JS",
 		"JavaScript",
 		"React Router DOM ",
 		"Redux Toolkit",
 		"Axios",
-		"Web APIs",
 		"Tailwind CSS",
-		"BootStrap 5",
 		"CSS 3",
 		"SASS",
 		"HTML 5",
-		"JSON",
 	];
 
-	const versionControl = ["Git", "GitHub"];
+	const versionControl = ["Azure Repos", "GitHub & Git"];
 	const backendAndCloud = [
 		"Firebase Authentication",
 		"Firebase Cloud Firestore",
