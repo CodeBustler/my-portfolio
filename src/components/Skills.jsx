@@ -24,8 +24,8 @@ function Skills() {
 
 	const versionControl = ["Azure Repos", "GitHub & Git"];
 	const backendAndCloud = [
-		"Firebase Authentication",
-		"Firebase Cloud Firestore",
+		"Microsoft Auth Library (MSAL)",
+		"Firebase Auth & Cloud Firestore",
 	];
 
 	const tools = ["Visual Studio Code", "Sublime Text"];
