@@ -30,7 +30,7 @@ function Projects() {
 			video: edgeVideo,
 			projectSummary: "Edge browser welcome page for customize themes & more",
 			projectTitle: "Microsoft Edge Browser Feature",
-			projectType: "Edge Themes & More ",
+			projectType: "Edge Themes & More",
 			technologies: "Feature Shipped Live => edge://customize",
 			projectUrl: "edge://customize",
 		},

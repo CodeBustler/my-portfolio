@@ -77,7 +77,7 @@ function HeroSection() {
 					{/**************** INTRO ****************/}
 
 					<p className="text-gray-300 leading-7 mt-8 ">
-					Frontend Web Developer with <span className="font-bold">4+ years</span>  of experience in <span className="font-bold"> React JS & Web Components</span>. Delivered a live feature for <span className="font-bold">Microsoft Edge Browser</span>  completed multiple freelance projects. Skilled in React, HTML, CSS, JavaScript & Web Components, focused on creating smooth, user-friendly experiences !
+						Frontend Web Developer with <span className="font-bold">5+ years</span> of experience in <span className="font-bold">React JS &amp; Web Components</span>, and working knowledge of <span className="font-bold">Node.js, Express.js &amp; PostgreSQL</span>. Delivered live features for <span className="font-bold">Microsoft Edge Browser</span> and completed multiple projects. Focused on creating smooth, high-performance, user-friendly experiences!
 					</p>
 
 					{/**************** SOCIAL LINKS ****************/}
@@ -140,7 +140,7 @@ function HeroSection() {
 							<RiTwitterXFill
 								className={`group-hover:text-white group-hover:scale-125 transition`}
 								title="@CodeBustler"
-							/>
+							/>       
 						</a>
 					</div>
 

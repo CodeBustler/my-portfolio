@@ -59,21 +59,20 @@ function AboutMe() {
 								<PiHandWavingFill className="inline mb-1 rotate-12 " />{" "}
 								Hey there,
 							</span>{" "}
-							I'm Mallikarjun Mavnoor, a frontend developer from
-							Karnataka, currently based in Hyderabad, India. I
-							hold a{" "}
-							<span className=" underline underline-offset-4 font-semibold">
-								B.Tech in Computer Science
+							I'm Mallikarjun Mavnoor, a Frontend &amp; Full Stack Developer with <span className="font-bold text-gray-200">5+ years of experience</span> currently based in Hyderabad, India. I hold a{" "}
+							<span className=" underline underline-offset-4 font-semibold text-gray-200">
+								B.Tech in Computer Science &amp; Engineering
 							</span>{" "}
-							from JNTU (Jawaharlal Nehru Technological
-							University) Hyderabad & thrive on frontend
-							technologies, particularly{" "}
-							<span className=" underline underline-offset-4 font-semibold">
-								JavaScript & React.js.
+							from JNTUH (Jawaharlal Nehru Technological University Hyderabad, 2016-2021) and specialize in{" "}
+							<span className=" underline underline-offset-4 font-semibold text-gray-200">
+								React.js, Web Components, Node.js, Express &amp; PostgreSQL.
 							</span>
 						</p>
-						<ul className="text-gray-400 leading-7 list-disc list-inside pt-5"><li>Worked with Microsoft on feature development for the Edge browser — one of my contributions is live at <a target="_blank" href="edge://customize" className="font-semibold text-blue-400">edge://customize</a>.</li>
-							<li>Built web apps and launched two call center websites as a freelancer via BigRock.</li></ul>
+						<ul className="text-gray-400 leading-7 list-disc list-inside pt-5 gap-2 flex flex-col">
+							<li>Currently working at <span className="font-semibold text-gray-200">CognitivZen Technologies</span> as a Frontend / Full Stack Developer, building AI-driven analytics dashboards (DataZen) and security audit systems (Demos Campaign).</li>
+							<li>Shipped <span className="font-semibold text-gray-200">Microsoft Edge Immersive SoftFRE</span> (<a target="_blank" rel="noreferrer" href="edge://customize" className="font-semibold text-blue-400">edge://customize</a>), optimizing layout customization and achieving &lt;1.8s FCP, &lt;2.5s LCP, and 24ms INP.</li>
+							<li>Experienced with automated testing using Jest, React Testing Library, and Playwright.</li>
+						</ul>
 						{/*----------------------------------------------*/}
 						{/***************** WHAT I DO ? ******************/}
 						{/*----------------------------------------------*/}
@@ -193,7 +192,16 @@ function AboutMe() {
 									title={"mallikarjun.mavnoor@gmail.com"}
 								>
 									<MdEmail className="text-2xl text-purple-500" />
-									<div>Send a mail</div>
+									<div>mallikarjun.mavnoor@gmail.com</div>
+								</ContactLinks>
+								<ContactLinks
+									link={
+										"tel:+919032222925"
+									}
+									title={"+91 9032222925"}
+								>
+									<PiPhoneCallFill className="text-2xl text-green-500" />
+									<div>+91 9032222925</div>
 								</ContactLinks>
 								<ContactLinks
 									link={
@@ -206,17 +214,13 @@ function AboutMe() {
 								</ContactLinks>
 								<ContactLinks
 									link={
-										"https://www.instagram.com/codebustler"
+										"https://github.com/CodeBustler"
 									}
 									title={"@CodeBustler"}
 								>
-									<SiInstagram
-										className="text-xl text-pink-500
-									"
-									/>
-									Instagram
+									<FaLink className="text-2xl text-gray-300" />
+									GitHub (@CodeBustler)
 								</ContactLinks>
-
 								<ContactLinks>
 									<MdLocationOn className="text-2xl text-orange-500" />
 									Hyderabad, India
