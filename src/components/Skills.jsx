@@ -26,7 +26,7 @@ function Skills() {
 		"Node.js & Express.js",
 		"PostgreSQL",
 		"REST APIs & Webhooks",
-		"JWT & OAuth 2.0",
+		"JWT Authentication",
 		"MSAL (Microsoft Auth Library)",
 		"Firebase Auth & Firestore",
 	];

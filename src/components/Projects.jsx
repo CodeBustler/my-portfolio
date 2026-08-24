@@ -123,6 +123,7 @@ function Projects() {
 							projectUrl={project.projectUrl}
 						/>
 					</Suspense>
+					
 				))}
 			</div>
 			<hr className="mt-10 opacity-30"/>

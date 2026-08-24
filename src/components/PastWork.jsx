@@ -100,10 +100,10 @@ function PastWork() {
 				{/* MICROSOFT ROLE */}
 				<div className="text-gray-300 leading-7 m-4 mt-6">
 					<h2 className="font-light text-md tracking-widest border inline-block border-1 border-yellow-400 rounded-lg pl-2 pr-2 mb-2">
-						Software Engineer
+						Software Engineer / Design Engineer
 					</h2>
 					<div className="text-gray-500 text-lg">
-						@Microsoft · Full-time | Apr'2024 - Nov'2025
+						@Microsoft · Vendor | Apr'2024 - Nov'2025
 					</div>
 					<div className="text-gray-400 text-sm italic mt-1">
 						Hyderabad, Telangana, India · On-site

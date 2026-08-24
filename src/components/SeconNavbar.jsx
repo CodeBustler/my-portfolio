@@ -13,7 +13,9 @@ import { HiHome } from "react-icons/hi";
 // ************ NAVBAR FOR OUTER ROUTES **************
 //----------------------------------------------------
 function SeconNavbar() {
-	useEffect(() => window.scrollTo(0, 0), []);
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 
 	//----------------------------------------------------
 	return (
