@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 // ASSETS
 import profile from "../assets/profile.png";
-import { SiHtml5, SiInstagram, SiLinkedin, SiStackblitz } from "react-icons/si";
+import { SiHtml5, SiInstagram, SiLinkedin, SiStackblitz, SiTypescript } from "react-icons/si";
 import { TfiCss3 } from "react-icons/tfi";
 import { IoLogoJavascript } from "react-icons/io";
 import { FaReact } from "react-icons/fa";
@@ -64,12 +64,12 @@ function HeroSection() {
 							)}
 							{currentPara === 2 && (
 								<p className="custom-animate-fade ">
-									I build amazing web apps
+									I build high-performance web apps
 								</p>
 							)}
 							{currentPara === 3 && (
 								<p className="custom-animate-fade ">
-									I do freelance work
+									I ship production features
 								</p>
 							)}
 						</div>
@@ -77,7 +77,7 @@ function HeroSection() {
 					{/**************** INTRO ****************/}
 
 					<p className="text-gray-300 leading-7 mt-8 ">
-						Frontend Web Developer with <span className="font-bold">5+ years</span> of experience in <span className="font-bold">React JS &amp; Web Components</span>, and working knowledge of <span className="font-bold">Node.js, Express.js &amp; PostgreSQL</span>. Delivered live features for <span className="font-bold">Microsoft Edge Browser</span> and completed multiple projects. Focused on creating smooth, high-performance, user-friendly experiences!
+						Frontend Developer with <span className="font-bold text-white">3+ years</span> of experience in <span className="font-bold text-white">React.js, JavaScript, and TypeScript</span>, UI Development, and working knowledge of <span className="font-bold text-white">Node.js, Express.js &amp; PostgreSQL</span>. Built &amp; shipped live features for <span className="font-bold text-white">Microsoft Edge Browser</span> (<span className="text-yellow-400 font-medium">edge://customize</span>), achieving <span className="font-bold text-white">&lt;1.8s FCP, &lt;2.5s LCP, and 24 ms INP</span>. Passionate about creating smooth, high-performance, and accessible web experiences!
 					</p>
 
 					{/**************** SOCIAL LINKS ****************/}
@@ -188,14 +188,15 @@ function HeroSection() {
 						/>
 					</div>
 					{/*************** TECH LOGOS ***************/}
-					<div className="flex md:flex-col gap-3  text-3xl  md:flex ">
-						<SiHtml5 className="text-orange-400 opacity-30 hover:animate-bounce cursor-pointer" />
-						<TfiCss3 className="text-blue-400 opacity-30 hover:animate-bounce cursor-pointer " />
-						<IoLogoJavascript className="text-yellow-400 opacity-30 hover:animate-bounce cursor-pointer" />
-						<FaReact className="text-blue-500 animate-spin opacity-40 hover:animate-bounce cursor-pointer  " />
-						<SiTailwindcss className="text-green-300 opacity-30 hover:animate-bounce cursor-pointer " />
-						<SiReactrouter className="text-red-400 opacity-30 hover:animate-bounce cursor-pointer" />
-						<SiRedux className="text-purple-400 opacity-30 hover:animate-bounce cursor-pointer" />
+					<div className="flex md:flex-col gap-3 text-3xl md:flex">
+						<SiHtml5 className="text-orange-400 opacity-30 hover:animate-bounce cursor-pointer" title="HTML5" />
+						<TfiCss3 className="text-blue-400 opacity-30 hover:animate-bounce cursor-pointer" title="CSS3" />
+						<IoLogoJavascript className="text-yellow-400 opacity-30 hover:animate-bounce cursor-pointer" title="JavaScript" />
+						<SiTypescript className="text-blue-500 opacity-30 hover:animate-bounce cursor-pointer" title="TypeScript" />
+						<FaReact className="text-blue-500 animate-spin opacity-40 hover:animate-bounce cursor-pointer" title="React" />
+						<SiTailwindcss className="text-green-300 opacity-30 hover:animate-bounce cursor-pointer" title="Tailwind CSS" />
+						<SiReactrouter className="text-red-400 opacity-30 hover:animate-bounce cursor-pointer" title="React Router" />
+						<SiRedux className="text-purple-400 opacity-30 hover:animate-bounce cursor-pointer" title="Redux Toolkit" />
 					</div>
 				</div>
 			</div>

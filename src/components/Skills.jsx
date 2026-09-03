@@ -8,37 +8,53 @@ function Skills() {
 	// ******************* SKILLS LIST *******************
 	//----------------------------------------------------
 	const frontEndSkills = [
-		"ReactJS 19",
 		"JavaScript (ES6+)",
+		"TypeScript",
+		"React 19",
 		"Redux Toolkit",
-		"Web Components",
-		"Microsoft Fluent UI",
-		"FAST Element",
-		"React Router DOM",
-		"Axios & Fetch API",
-		"Tailwind CSS",
-		"SASS / CSS3",
-		"HTML5",
-		"Accessibility (WCAG)",
+		"React Router",
+		"Axios",
+		"React Native",
 	];
 
-	const backendAndCloud = [
-		"Node.js & Express.js",
-		"PostgreSQL",
-		"REST APIs & Webhooks",
-		"JWT Authentication",
-		"MSAL (Microsoft Auth Library)",
-		"Firebase Auth & Firestore",
+	const uiTechnologies = [
+		"HTML5",
+		"CSS3",
+		"Tailwind CSS",
+		"Sass",
+		"Web Components",
+		"Microsoft Fluent UI",
+		"FAST Elements",
+		"Accessibility (WCAG)",
 	];
 
 	const testingSkills = [
 		"Jest",
 		"React Testing Library",
-		"Playwright (E2E Testing)",
 	];
 
-	const versionControl = ["Git & GitHub", "Azure Repos"];
-	const tools = ["VS Code", "Cursor IDE", "Antigravity IDE"];
+	const backendSkills = [
+		"Node.js",
+		"Express.js",
+		"PostgreSQL",
+		"REST APIs",
+		"Webhooks",
+	];
+
+	const authSkills = [
+		"JWT",
+		"MSAL (Microsoft Authentication Library)",
+	];
+
+	const toolsAndMethodologies = [
+		"Git & GitHub",
+		"Azure Repos",
+		"VS Code",
+		"Jira",
+		"Agile / Scrum",
+		"Chrome DevTools",
+		"Redux DevTools",
+	];
 	//----------------------------------------------------
 
 	return (
@@ -49,101 +65,124 @@ function Skills() {
 				<span className="text-gray-500 text-2xl">&amp; Technologies</span>
 			</h1>
 			<p className="text-gray-300 mt-5 leading-7">
-				Frontend &amp; Full-Stack Engineer with over <span className="font-bold">5+ years of experience</span> building performant, accessible, and scalable web applications. Proficient in <span className="font-bold">React.js</span>, <span className="font-bold">JavaScript (ES6+)</span>, <span className="font-bold">Web Components</span>, <span className="font-bold">Node.js</span>, and <span className="font-bold">PostgreSQL</span>. Experienced in state management, automated testing (Jest, Playwright), micro-frontend architectures, and cloud integration.
+				Frontend Developer with over <span className="font-bold text-white">3+ years of experience</span> in <span className="font-bold text-white">React.js, JavaScript, and TypeScript</span>, UI Development, and working knowledge of <span className="font-bold text-white">Node.js, Express.js &amp; PostgreSQL</span>. Specialized in building high-performance, accessible (WCAG), and responsive enterprise applications with reusable Web Components, dynamic state management, and modern developer workflows.
 			</p>
 
 			{/*----------------------------------------------*/}
 			{/************** FRONTEND SKILLS ***************/}
 			{/*----------------------------------------------*/}
-			<div>
-				<h2 className=" mt-8 mb-5 font-semibold text-xl text-gray-500">
-					Front-End &amp; UI Technologies
+			<div className="mt-8">
+				<h2 className="mb-5 font-semibold text-xl text-gray-500 flex items-center gap-2">
+					<span className="w-2 h-2 rounded-full bg-yellow-400 inline-block"></span>
+					Frontend Development
 				</h2>
-				<div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+				<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
 					{frontEndSkills.map((skill, index) => (
 						<div
 							key={index}
-							className="bg-[#1D2430] py-4 px-6 rounded-lg flex items-center gap-2 hover:outline outline-1 outline-gray-600"
+							className="bg-[#1D2430] py-3 px-5 rounded-lg flex items-center gap-3 border border-gray-800 hover:border-yellow-400/50 hover:bg-[#232c3a] transition"
 						>
-							<HiCheckCircle className="text-2xl text-green-500" />
-							{skill}
+							<HiCheckCircle className="text-xl text-green-400 shrink-0" />
+							<span className="text-gray-200 text-sm font-medium">{skill}</span>
 						</div>
 					))}
 				</div>
 			</div>
+
 			{/*----------------------------------------------*/}
-			{/************** BACKEND, TESTING & CLOUD ***************/}
+			{/************** UI TECHNOLOGIES ***************/}
 			{/*----------------------------------------------*/}
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+			<div className="mt-8">
+				<h2 className="mb-5 font-semibold text-xl text-gray-500 flex items-center gap-2">
+					<span className="w-2 h-2 rounded-full bg-blue-400 inline-block"></span>
+					UI Technologies &amp; Design Systems
+				</h2>
+				<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+					{uiTechnologies.map((skill, index) => (
+						<div
+							key={index}
+							className="bg-[#1D2430] py-3 px-5 rounded-lg flex items-center gap-3 border border-gray-800 hover:border-blue-400/50 hover:bg-[#232c3a] transition"
+						>
+							<HiCheckCircle className="text-xl text-green-400 shrink-0" />
+							<span className="text-gray-200 text-sm font-medium">{skill}</span>
+						</div>
+					))}
+				</div>
+			</div>
+
+			{/*----------------------------------------------*/}
+			{/************** BACKEND, TESTING, AUTH & TOOLS ***************/}
+			{/*----------------------------------------------*/}
+			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
+				{/* BACKEND */}
 				<div>
-					<h2 className=" mt-10 mb-5 font-semibold text-xl text-gray-500">
-						Backend &amp; Cloud Services
+					<h2 className="mb-4 font-semibold text-lg text-gray-400 flex items-center gap-2">
+						<span className="w-2 h-2 rounded-full bg-emerald-400 inline-block"></span>
+						Backend (Working Knowledge)
 					</h2>
-					<div className="flex flex-col gap-4">
-						{backendAndCloud.map((skill, index) => (
+					<div className="flex flex-col gap-3">
+						{backendSkills.map((skill, index) => (
 							<div
 								key={index}
-								className="bg-[#1D2430] py-4 px-6 rounded-lg flex items-center gap-2 hover:outline outline-1 outline-gray-600"
+								className="bg-[#1D2430] py-3 px-5 rounded-lg flex items-center gap-3 border border-gray-800 hover:border-emerald-400/50 hover:bg-[#232c3a] transition"
 							>
-								<HiCheckCircle className="text-2xl text-green-500" />
-								{skill}
+								<HiCheckCircle className="text-xl text-green-400 shrink-0" />
+								<span className="text-gray-200 text-sm font-medium">{skill}</span>
 							</div>
 						))}
 					</div>
 				</div>
-				{/*----------------------------------------------*/}
-				{/******************* TESTING ******************/}
-				{/*----------------------------------------------*/}
+
+				{/* TESTING */}
 				<div>
-					<h2 className=" mt-10 mb-5 font-semibold text-xl text-gray-500">
-						Automated Testing
+					<h2 className="mb-4 font-semibold text-lg text-gray-400 flex items-center gap-2">
+						<span className="w-2 h-2 rounded-full bg-purple-400 inline-block"></span>
+						Testing &amp; Quality
 					</h2>
-					<div className="flex flex-col gap-4">
+					<div className="flex flex-col gap-3">
 						{testingSkills.map((skill, index) => (
 							<div
 								key={index}
-								className="bg-[#1D2430] py-4 px-6 rounded-lg flex items-center gap-2 hover:outline outline-1 outline-gray-600"
+								className="bg-[#1D2430] py-3 px-5 rounded-lg flex items-center gap-3 border border-gray-800 hover:border-purple-400/50 hover:bg-[#232c3a] transition"
 							>
-								<HiCheckCircle className="text-2xl text-green-500" />
-								{skill}
+								<HiCheckCircle className="text-xl text-green-400 shrink-0" />
+								<span className="text-gray-200 text-sm font-medium">{skill}</span>
+							</div>
+						))}
+					</div>
+
+					{/* AUTHENTICATION */}
+					<h2 className="mt-8 mb-4 font-semibold text-lg text-gray-400 flex items-center gap-2">
+						<span className="w-2 h-2 rounded-full bg-pink-400 inline-block"></span>
+						Authentication
+					</h2>
+					<div className="flex flex-col gap-3">
+						{authSkills.map((skill, index) => (
+							<div
+								key={index}
+								className="bg-[#1D2430] py-3 px-5 rounded-lg flex items-center gap-3 border border-gray-800 hover:border-pink-400/50 hover:bg-[#232c3a] transition"
+							>
+								<HiCheckCircle className="text-xl text-green-400 shrink-0" />
+								<span className="text-gray-200 text-sm font-medium">{skill}</span>
 							</div>
 						))}
 					</div>
 				</div>
-				{/*----------------------------------------------*/}
-				{/************** VERSION CONTROL ***************/}
-				{/*----------------------------------------------*/}
-				<div>
-					<h2 className=" mt-10 mb-5 font-semibold text-xl text-gray-500">
-						Version Control
+
+				{/* TOOLS & METHODOLOGIES (Spanning 2 columns on lg screens) */}
+				<div className="lg:col-span-2">
+					<h2 className="mb-4 font-semibold text-lg text-gray-400 flex items-center gap-2">
+						<span className="w-2 h-2 rounded-full bg-cyan-400 inline-block"></span>
+						Tools, Debugging &amp; Methodologies
 					</h2>
-					<div className="flex flex-col gap-4">
-						{versionControl.map((skill, index) => (
+					<div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+						{toolsAndMethodologies.map((skill, index) => (
 							<div
 								key={index}
-								className="bg-[#1D2430] py-4 px-6 rounded-lg flex items-center gap-2 hover:outline outline-1 outline-gray-600"
+								className="bg-[#1D2430] py-3 px-5 rounded-lg flex items-center gap-3 border border-gray-800 hover:border-cyan-400/50 hover:bg-[#232c3a] transition"
 							>
-								<HiCheckCircle className="text-2xl text-green-500" />
-								{skill}
-							</div>
-						))}
-					</div>
-				</div>
-				{/*----------------------------------------------*/}
-				{/********************* TOOLS ********************/}
-				{/*----------------------------------------------*/}
-				<div>
-					<h2 className=" mt-10 mb-5 font-semibold text-xl text-gray-500">
-						IDEs &amp; Environments
-					</h2>
-					<div className="flex flex-col gap-4">
-						{tools.map((skill, index) => (
-							<div
-								key={index}
-								className="bg-[#1D2430] py-4 px-6 rounded-lg flex items-center gap-2 hover:outline outline-1 outline-gray-600"
-							>
-								<HiCheckCircle className="text-2xl text-green-500" />
-								{skill}
+								<HiCheckCircle className="text-xl text-green-400 shrink-0" />
+								<span className="text-gray-200 text-sm font-medium">{skill}</span>
 							</div>
 						))}
 					</div>

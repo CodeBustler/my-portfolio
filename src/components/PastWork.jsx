@@ -34,30 +34,35 @@ function PastWork() {
 		},
 	];
 
-	const dailyWork = {
-		microsoftVendor: [
-			"Worked on Microsoft Edge browser's welcome page (ImmersiveSoftFRE edge://customize) & Bing Sports segments.",
-			"Built reusable Web Components in React, FAST Element, and Fluent UI for cross-team use, including Edge Settings.",
-			"Achieved <1.8s FCP, <2.5s LCP, and 24ms INP via performance and code optimizations.",
-			"Integrated REST APIs for user preferences and data fetching.",
-			"Participated in daily standups, sprint planning, and Scrum meetings.",
-			"Collaborated with UI/UX and QA teams to identify and resolve cross-browser and WCAG accessibility issues."
-		],
-		cognitivZen: [
-			"Built AI-driven Analytics & Reporting Platform (DataZen) for natural language queries, real-time analytics, and dynamic React dashboards.",
-			"Developed Node.js services for asynchronous event logging, rate limiting, and an audit logging system (Demos Campaign).",
-			"Implemented Role-Based Access Control (RBAC), token authentication, and optimized PostgreSQL queries/indexing."
-		],
-		springInfotech: [
-			"Actively participated in Scrum meetings, daily standups, and sprint planning sessions.",
-			"Gathered requirements and contributed to frontend development.",
-			"Developed reusable React components to optimize code efficiency.",
-			"Integrated APIs to facilitate data fetching and updating within applications.",
-			"Collaborated closely with UI/UX designers to ensure user-friendly interfaces.",
-			"Worked with QA teams to identify and resolve bugs effectively.",
-			"Managed deployment and releases using Git across different environments."
-		]
-	};
+	const cognitivZenHighlights = [
+		{
+			category: "Microsoft Vendor Engagement (1 Year On-site)",
+			items: [
+				"Built and shipped Microsoft Edge First Run Experience (ImmersiveSoftFRE at edge://customize) from the ground up with theme selection, site pinning, and AI-powered customization.",
+				"Achieved <1.8s FCP, <2.5s LCP, and 24 ms INP through code splitting, lazy loading, and asset optimizations.",
+				"Developed reusable Web Components and integrated REST APIs for user preferences using Fluent UI and FAST Elements.",
+				"Enhanced Bing Sports standings UI with optimized performance, dynamic gradient header animations, and cross-browser compatibility.",
+				"Applied WCAG accessibility standards and collaborated with UI/UX QA teams to resolve cross-browser/a11y defects.",
+			],
+		},
+		{
+			category: "DataZen Analytics Platform & Demos Products",
+			items: [
+				"Built DataZen Analytics: AI-driven analytics & reporting platform featuring natural language queries, real-time analytics, and dynamic React dashboards with interactive charts and filters.",
+				"Engineered Node.js backend services for asynchronous event processing, rate limiting, and token-based authentication.",
+				"Built Demos Campaign Audit Logging system with searchable React dashboard, filters, CSV exports, and CRUD audit logs for security tracking.",
+				"Developed Demos Social App (BlueSky / AT Protocol) cross-platform client using React Native, Expo, MobX, lazy loading, and prefetching.",
+			],
+		},
+	];
+
+	const springInfotechHighlights = [
+		"Developed reusable React components and modular UI elements to enhance code efficiency and maintainability.",
+		"Integrated REST APIs using Fetch API and Axios for real-time data fetching, error handling, and state synchronization.",
+		"Collaborated closely with UI/UX designers to implement pixel-perfect, responsive layouts across devices.",
+		"Worked with QA teams to identify, debug, and resolve UI defects and cross-browser compatibility issues.",
+		"Actively participated in daily standups, sprint planning, and Agile/Scrum delivery cycles.",
+	];
 
 	// -------------------------------------------------------------
 	return (
@@ -69,68 +74,84 @@ function PastWork() {
 				<MdWork className="text-gray-500 mb-1" />
 				Work Experience
 			</h1>
-			{/* CURRENT EMPLOYMENT */}
-			<div>
-				<div className="text-gray-500 text-2xl mt-6 underline underline-offset-8">
-					Current Employment
-				</div>
 
-				{/* COGNITIVZEN ROLE */}
-				<div className="text-gray-300 leading-7 m-4">
-					<h2 className="font-light text-md tracking-widest border inline-block border-1 border-yellow-400 rounded-lg pl-2 pr-2 mb-2">
-						Software Engineer
-					</h2>
-					<div className="text-gray-500 text-lg">
-						@CognitivZen Technologies | Apr'2024 - Present
+			{/* WORK HISTORY TIMELINE */}
+			<div className="mt-8 space-y-10">
+				{/* 1. COGNITIVZEN TECHNOLOGIES */}
+				<div className="border border-gray-800 bg-[#161d2b] p-6 md:p-8 rounded-xl relative hover:border-yellow-400/40 transition">
+					<div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
+						<div>
+							<div className="flex flex-wrap items-center gap-3">
+								<h2 className="text-xl md:text-2xl text-white font-semibold">
+									Frontend Developer
+								</h2>
+								<span className="text-xs bg-yellow-400/10 text-yellow-400 border border-yellow-400/30 px-3 py-1 rounded-full font-medium">
+									Current Role
+								</span>
+							</div>
+							<div className="text-gray-400 text-lg mt-1">
+								CognitivZen Technologies
+								<span className="text-gray-500 text-sm ml-2">· Full-time</span>
+							</div>
+						</div>
+						<div className="text-gray-400 md:text-right text-sm md:text-base font-normal">
+							<div className="text-yellow-400 font-medium">Apr 2024 – Present</div>
+							<div className="text-gray-500">Hyderabad, India</div>
+						</div>
 					</div>
-					<ul className="font-normal list-disc ml-6 mt-2">
-						{dailyWork.cognitivZen.map((task, index) => (
-							<li key={`cognitivZen-${index}`}>{task}</li>
+
+					{/* ENGAGEMENT CALLOUT */}
+					<div className="mt-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#1F2937] border border-blue-500/30 text-blue-300 text-sm font-normal">
+						<span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+						<span><strong>On-site vendor engagement with Microsoft for 1 year</strong> (Edge Browser &amp; Bing Sports)</span>
+					</div>
+
+					{/* DETAILS */}
+					<div className="mt-6 space-y-6">
+						{cognitivZenHighlights.map((section, sIdx) => (
+							<div key={sIdx} className="bg-[#121723]/60 p-5 rounded-lg border border-gray-800/80">
+								<h3 className="text-yellow-400 text-sm uppercase tracking-wider font-semibold mb-3">
+									{section.category}
+								</h3>
+								<ul className="font-normal text-gray-300 space-y-2.5 list-disc ml-5 text-sm md:text-base leading-relaxed">
+									{section.items.map((task, tIdx) => (
+										<li key={tIdx}>{task}</li>
+									))}
+								</ul>
+							</div>
 						))}
-					</ul>
-				</div>
-			</div>
-
-			{/* PAST EMPLOYMENT */}
-			<div>
-				<div className="text-gray-500 text-2xl mt-8 underline underline-offset-8">
-					Past Employment
+					</div>
 				</div>
 
-				{/* MICROSOFT ROLE */}
-				<div className="text-gray-300 leading-7 m-4 mt-6">
-					<h2 className="font-light text-md tracking-widest border inline-block border-1 border-yellow-400 rounded-lg pl-2 pr-2 mb-2">
-						Software Engineer / Design Engineer
-					</h2>
-					<div className="text-gray-500 text-lg">
-						@Microsoft · Vendor | Apr'2024 - Nov'2025
+				{/* 2. SPRING INFOTECH PVT. LTD. */}
+				<div className="border border-gray-800 bg-[#161d2b] p-6 md:p-8 rounded-xl hover:border-gray-700 transition">
+					<div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
+						<div>
+							<div className="flex flex-wrap items-center gap-3">
+								<h2 className="text-xl md:text-2xl text-white font-semibold">
+									Frontend Development Intern
+								</h2>
+								<span className="text-xs bg-gray-700 text-gray-300 px-3 py-1 rounded-full font-medium">
+									Internship
+								</span>
+							</div>
+							<div className="text-gray-400 text-lg mt-1">
+								Spring Infotech Pvt. Ltd.
+							</div>
+						</div>
+						<div className="text-gray-400 md:text-right text-sm md:text-base font-normal">
+							<div className="text-gray-300 font-medium">Sep 2023 – Mar 2024</div>
+							<div className="text-gray-500">Bangalore, India</div>
+						</div>
 					</div>
-					<div className="text-gray-400 text-sm italic mt-1">
-						Hyderabad, Telangana, India · On-site
-					</div>
-					<ul className="font-normal list-disc ml-6 mt-2">
-						{dailyWork.microsoftVendor.map((task, index) => (
-							<li key={`microsoft-${index}`}>{task}</li>
-						))}
-					</ul>
-				</div>
 
-				{/* SPRING INFOTECH ROLE */}
-				<div className="text-gray-300 leading-7 m-4 mt-6">
-					<h2 className="font-light text-md tracking-widest border inline-block border-1 border-yellow-400 rounded-lg pl-2 pr-2 mb-2">
-						Frontend Developer
-					</h2>
-					<div className="text-gray-500 text-lg">
-						@Spring Infotech Private Limited · Full-time | Mar'2021 - Mar'2024
+					<div className="mt-6 bg-[#121723]/60 p-5 rounded-lg border border-gray-800/80">
+						<ul className="font-normal text-gray-300 space-y-2.5 list-disc ml-5 text-sm md:text-base leading-relaxed">
+							{springInfotechHighlights.map((task, index) => (
+								<li key={index}>{task}</li>
+							))}
+						</ul>
 					</div>
-					<div className="text-gray-400 text-sm italic mt-1">
-						Bangalore Urban, Karnataka, India · Remote
-					</div>
-					<ul className="font-normal list-disc ml-6 mt-2">
-						{dailyWork.springInfotech.map((task, index) => (
-							<li key={`spring-${index}`}>{task}</li>
-						))}
-					</ul>
 				</div>
 			</div>
 			<div className="text-gray-500 text-2xl mt-10 underline underline-offset-8">

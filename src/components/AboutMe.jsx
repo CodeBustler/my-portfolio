@@ -59,19 +59,17 @@ function AboutMe() {
 								<PiHandWavingFill className="inline mb-1 rotate-12 " />{" "}
 								Hey there,
 							</span>{" "}
-							I'm Mallikarjun Mavnoor, a Frontend &amp; Full Stack Developer with <span className="font-bold text-gray-200">5+ years of experience</span> currently based in Hyderabad, India. I hold a{" "}
+							I'm Mallikarjun Mavnoor, a Frontend Developer with <span className="font-bold text-gray-200">3+ years of experience</span> in React.js, JavaScript, TypeScript, and UI Development, with working knowledge of Node.js, Express.js &amp; PostgreSQL, currently based in Hyderabad, India. I hold a{" "}
 							<span className=" underline underline-offset-4 font-semibold text-gray-200">
 								B.Tech in Computer Science &amp; Engineering
 							</span>{" "}
-							from JNTUH (Jawaharlal Nehru Technological University Hyderabad, 2016-2021) and specialize in{" "}
-							<span className=" underline underline-offset-4 font-semibold text-gray-200">
-								React.js, Web Components, Node.js, Express &amp; PostgreSQL.
-							</span>
+							from JNTUH (Jawaharlal Nehru Technological University Hyderabad, 2016 - 2021).
 						</p>
-						<ul className="text-gray-400 leading-7 list-disc list-inside pt-5 gap-2 flex flex-col">
-							<li>Currently working at <span className="font-semibold text-gray-200">CognitivZen Technologies</span> as a Frontend / Full Stack Developer, building AI-driven analytics dashboards (DataZen) and security audit systems (Demos Campaign).</li>
-							<li>Shipped <span className="font-semibold text-gray-200">Microsoft Edge Immersive SoftFRE</span> (<a target="_blank" rel="noreferrer" href="edge://customize" className="font-semibold text-blue-400">edge://customize</a>), optimizing layout customization and achieving &lt;1.8s FCP, &lt;2.5s LCP, and 24ms INP.</li>
-							<li>Experienced with automated testing using Jest, React Testing Library, and Playwright.</li>
+						<ul className="text-gray-400 leading-7 list-disc list-inside pt-5 gap-2.5 flex flex-col">
+							<li>Frontend Developer at <span className="font-semibold text-gray-200">CognitivZen Technologies</span> (Apr 2024 – Present), including an <span className="font-semibold text-gray-200">on-site vendor engagement with Microsoft for 1 year</span>.</li>
+							<li>Built &amp; shipped <span className="font-semibold text-gray-200">Microsoft Edge Immersive SoftFRE</span> (<a target="_blank" rel="noreferrer" href="edge://customize" className="font-semibold text-blue-400">edge://customize</a>), achieving &lt;1.8s FCP, &lt;2.5s LCP, and 24 ms INP, and enhanced Bing Sports standings UI.</li>
+							<li>Engineered AI-driven analytics dashboards (<span className="font-semibold text-gray-200">DataZen</span>), security audit logging systems (<span className="font-semibold text-gray-200">Demos Campaign</span>), and cross-platform social networking (<span className="font-semibold text-gray-200">Demos Social App</span> via AT Protocol).</li>
+							<li>Former Frontend Development Intern at <span className="font-semibold text-gray-200">Spring Infotech Pvt. Ltd.</span> (Sep 2023 – Mar 2024), developing reusable React components and integrating REST APIs in Agile sprints.</li>
 						</ul>
 						{/*----------------------------------------------*/}
 						{/***************** WHAT I DO ? ******************/}
@@ -198,10 +196,10 @@ function AboutMe() {
 									link={
 										"tel:+919032222925"
 									}
-									title={"+91 9032222925"}
+									title={"+91 9032222925 • +91 9110766839"}
 								>
-									<PiPhoneCallFill className="text-2xl text-green-500" />
-									<div>+91 9032222925</div>
+									<PiPhoneCallFill className="text-2xl text-green-500 shrink-0" />
+									<div>+91 9032222925 • 9110766839</div>
 								</ContactLinks>
 								<ContactLinks
 									link={
