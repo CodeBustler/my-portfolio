@@ -59,17 +59,16 @@ function AboutMe() {
 								<PiHandWavingFill className="inline mb-1 rotate-12 " />{" "}
 								Hey there,
 							</span>{" "}
-							I'm Mallikarjun Mavnoor, a Frontend Developer with <span className="font-bold text-gray-200">3+ years of experience</span> in React.js, JavaScript, TypeScript, and UI Development, with working knowledge of Node.js, Express.js &amp; PostgreSQL, currently based in Hyderabad, India. I hold a{" "}
+							I'm Mallikarjun Mavnoor, a Frontend Developer with <span className="font-bold text-gray-200">4+ years of experience</span> in React.js, JavaScript, TypeScript, and UI Development, with working knowledge of Node.js, Express.js &amp; PostgreSQL, currently based in Hyderabad, India. I hold a{" "}
 							<span className=" underline underline-offset-4 font-semibold text-gray-200">
 								B.Tech in Computer Science &amp; Engineering
 							</span>{" "}
 							from JNTUH (Jawaharlal Nehru Technological University Hyderabad, 2016 - 2021).
 						</p>
 						<ul className="text-gray-400 leading-7 list-disc list-inside pt-5 gap-2.5 flex flex-col">
-							<li>Frontend Developer at <span className="font-semibold text-gray-200">CognitivZen Technologies</span> (Apr 2024 – Present), including an <span className="font-semibold text-gray-200">on-site vendor engagement with Microsoft for 1 year</span>.</li>
-							<li>Built &amp; shipped <span className="font-semibold text-gray-200">Microsoft Edge Immersive SoftFRE</span> (<a target="_blank" rel="noreferrer" href="edge://customize" className="font-semibold text-blue-400">edge://customize</a>), achieving &lt;1.8s FCP, &lt;2.5s LCP, and 24 ms INP, and enhanced Bing Sports standings UI.</li>
-							<li>Engineered AI-driven analytics dashboards (<span className="font-semibold text-gray-200">DataZen</span>), security audit logging systems (<span className="font-semibold text-gray-200">Demos Campaign</span>), and cross-platform social networking (<span className="font-semibold text-gray-200">Demos Social App</span> via AT Protocol).</li>
-							<li>Former Frontend Development Intern at <span className="font-semibold text-gray-200">Spring Infotech Pvt. Ltd.</span> (Sep 2023 – Mar 2024), developing reusable React components and integrating REST APIs in Agile sprints.</li>
+							<li>Software Engineer at <span className="font-semibold text-gray-200">CognitivZen Technologies</span> (Apr 2024 – Present · 2 yrs 6 mos), building the <span className="font-semibold text-gray-200">DataZen Analytics Platform</span>, <span className="font-semibold text-gray-200">Demos Campaign</span> audit logging system, and <span className="font-semibold text-gray-200">Demos Social App</span> (BlueSky / AT Protocol).</li>
+							<li>Frontend / React.js Developer | On-site <span className="font-semibold text-gray-200">Microsoft [Contract]</span> (Jul 2024 – Dec 2025 · 1.5 years), built &amp; shipped <span className="font-semibold text-gray-200">Microsoft Edge Immersive SoftFRE</span> (<a target="_blank" rel="noreferrer" href="edge://customize" className="font-semibold text-blue-400">edge://customize</a>) achieving &lt;1.8s FCP, &lt;2.5s LCP, and 24 ms INP, and enhanced the <span className="font-semibold text-gray-200">Bing Sports Segment</span> standings UI.</li>
+							<li>Frontend Developer at <span className="font-semibold text-gray-200">Spring Infotech Pvt. Ltd.</span> (Aug 2022 – Mar 2024 · 1 yr 7 mos), developing reusable React components and integrating REST APIs in Agile sprints.</li>
 						</ul>
 						{/*----------------------------------------------*/}
 						{/***************** WHAT I DO ? ******************/}

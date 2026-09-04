@@ -65,7 +65,7 @@ function Skills() {
 				<span className="text-gray-500 text-2xl">&amp; Technologies</span>
 			</h1>
 			<p className="text-gray-300 mt-5 leading-7">
-				Frontend Developer with over <span className="font-bold text-white">3+ years of experience</span> in <span className="font-bold text-white">React.js, JavaScript, and TypeScript</span>, UI Development, and working knowledge of <span className="font-bold text-white">Node.js, Express.js &amp; PostgreSQL</span>. Specialized in building high-performance, accessible (WCAG), and responsive enterprise applications with reusable Web Components, dynamic state management, and modern developer workflows.
+				Frontend Developer with over <span className="font-bold text-white">4+ years of experience</span> in <span className="font-bold text-white">React.js, JavaScript, and TypeScript</span>, UI Development, and working knowledge of <span className="font-bold text-white">Node.js, Express.js &amp; PostgreSQL</span>. Specialized in building high-performance, accessible (WCAG), and responsive enterprise applications with reusable Web Components, dynamic state management, and modern developer workflows.
 			</p>
 
 			{/*----------------------------------------------*/}

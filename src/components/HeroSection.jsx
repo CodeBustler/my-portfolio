@@ -2,13 +2,23 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 // ASSETS
 import profile from "../assets/profile.png";
-import { SiHtml5, SiInstagram, SiLinkedin, SiStackblitz, SiTypescript } from "react-icons/si";
+import {
+	SiHtml5,
+	SiInstagram,
+	SiLinkedin,
+	SiStackblitz,
+	SiTypescript,
+	SiTailwindcss,
+	SiRedux,
+	SiReactrouter,
+	SiNodedotjs,
+	SiExpress,
+	SiPostgresql,
+	SiGit,
+} from "react-icons/si";
 import { TfiCss3 } from "react-icons/tfi";
 import { IoLogoJavascript } from "react-icons/io";
 import { FaReact } from "react-icons/fa";
-import { SiTailwindcss } from "react-icons/si";
-import { SiRedux } from "react-icons/si";
-import { SiReactrouter } from "react-icons/si";
 import { MdDownload } from "react-icons/md";
 import { ImGithub } from "react-icons/im";
 import { BsYoutube } from "react-icons/bs";
@@ -77,7 +87,7 @@ function HeroSection() {
 					{/**************** INTRO ****************/}
 
 					<p className="text-gray-300 leading-7 mt-8 ">
-						Frontend Developer with <span className="font-bold text-white">3+ years</span> of experience in <span className="font-bold text-white">React.js, JavaScript, and TypeScript</span>, UI Development, and working knowledge of <span className="font-bold text-white">Node.js, Express.js &amp; PostgreSQL</span>. Built &amp; shipped live features for <span className="font-bold text-white">Microsoft Edge Browser</span> (<span className="text-yellow-400 font-medium">edge://customize</span>), achieving <span className="font-bold text-white">&lt;1.8s FCP, &lt;2.5s LCP, and 24 ms INP</span>. Passionate about creating smooth, high-performance, and accessible web experiences!
+						Frontend Developer with <span className="font-bold text-white">4+ years</span> of experience in <span className="font-bold text-white">React.js, JavaScript, and TypeScript</span>, UI Development, and working knowledge of <span className="font-bold text-white">Node.js, Express.js &amp; PostgreSQL</span>. Built &amp; shipped live features for <span className="font-bold text-white">Microsoft Edge Browser</span> (<span className="text-yellow-400 font-medium">edge://customize</span>), achieving <span className="font-bold text-white">&lt;1.8s FCP, &lt;2.5s LCP, and 24 ms INP</span>. Passionate about creating smooth, high-performance, and accessible web experiences!
 					</p>
 
 					{/**************** SOCIAL LINKS ****************/}
@@ -170,7 +180,7 @@ function HeroSection() {
 				{/*----------------------------------------------*/}
 				{/*************** RIGHT CONTAINER ***************/}
 				{/*----------------------------------------------*/}
-				<div className="order-1 md:order-2 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-end gap-16 md:gap-24">
+				<div className="order-1 md:order-2 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-end gap-12 md:gap-12 lg:gap-16">
 					<div className="relative">
 						<img
 							src={profile}
@@ -188,7 +198,7 @@ function HeroSection() {
 						/>
 					</div>
 					{/*************** TECH LOGOS ***************/}
-					<div className="flex md:flex-col gap-3 text-3xl md:flex">
+					<div className="flex flex-wrap md:grid md:grid-cols-2 gap-3.5 md:gap-x-5 md:gap-y-4 text-2xl md:text-3xl justify-center items-center">
 						<SiHtml5 className="text-orange-400 opacity-30 hover:animate-bounce cursor-pointer" title="HTML5" />
 						<TfiCss3 className="text-blue-400 opacity-30 hover:animate-bounce cursor-pointer" title="CSS3" />
 						<IoLogoJavascript className="text-yellow-400 opacity-30 hover:animate-bounce cursor-pointer" title="JavaScript" />
@@ -197,6 +207,10 @@ function HeroSection() {
 						<SiTailwindcss className="text-green-300 opacity-30 hover:animate-bounce cursor-pointer" title="Tailwind CSS" />
 						<SiReactrouter className="text-red-400 opacity-30 hover:animate-bounce cursor-pointer" title="React Router" />
 						<SiRedux className="text-purple-400 opacity-30 hover:animate-bounce cursor-pointer" title="Redux Toolkit" />
+						<SiNodedotjs className="text-green-500 opacity-30 hover:animate-bounce cursor-pointer" title="Node.js" />
+						<SiExpress className="text-gray-300 opacity-30 hover:animate-bounce cursor-pointer" title="Express.js" />
+						<SiPostgresql className="text-sky-400 opacity-30 hover:animate-bounce cursor-pointer" title="PostgreSQL" />
+						<SiGit className="text-orange-500 opacity-30 hover:animate-bounce cursor-pointer" title="Git" />
 					</div>
 				</div>
 			</div>
