@@ -288,7 +288,7 @@ function PastWork() {
 							</div>
 						</div>
 						<div className="text-gray-400 md:text-right text-sm md:text-base font-normal">
-							<div className="text-blue-400 font-medium">Aug 2022 – Mar 2024 · 1 yr 7 mos</div>
+							<div className="text-blue-400 font-medium">Sep 2022 – Mar 2024 · 1 yr 7 mos</div>
 							<div className="text-gray-500">Bangalore Urban, Karnataka, India · Remote</div>
 						</div>
 					</div>
